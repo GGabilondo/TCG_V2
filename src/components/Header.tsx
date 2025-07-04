@@ -1,0 +1,159 @@
+import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { Menu, X, MessageCircle } from 'lucide-react';
+
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToSection = (sectionId: string) => {
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    setIsMenuOpen(false);
+  };
+
+  const handleContactClick = () => {
+    navigate('/contact');
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
+
+  return (
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled ? 'bg-black/95 backdrop-blur-md shadow-lg border-b border-blue-500/20' : 'bg-transparent'
+    }`}>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 lg:h-20">
+          {/* Logo */}
+          <div 
+            className="flex items-center space-x-3 cursor-pointer" 
+            onClick={() => navigate('/')}
+          >
+            <div className="relative w-12 h-12 lg:w-14 lg:h-14">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center shadow-lg shadow-blue-500/30">
+                <span className="text-white font-bold text-lg lg:text-xl">TCG</span>
+              </div>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-xl lg:text-2xl font-bold text-white">TCG</span>
+              <span className="text-sm lg:text-base text-blue-400 font-medium">CarCare</span>
+            </div>
+          </div>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-8">
+            <button 
+              onClick={() => scrollToSection('home')}
+              className="text-gray-300 hover:text-blue-400 transition-colors font-medium nav-link-underline glow-text"
+            >
+              Home
+            </button>
+            <button 
+              onClick={() => scrollToSection('services')}
+              className="text-gray-300 hover:text-blue-400 transition-colors font-medium nav-link-underline glow-text"
+            >
+              Services
+            </button>
+            <button 
+              onClick={() => scrollToSection('about')}
+              className="text-gray-300 hover:text-blue-400 transition-colors font-medium nav-link-underline glow-text"
+            >
+              About
+            </button>
+            <button 
+              onClick={handleContactClick}
+              className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-2 rounded-full hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-blue-500/30 transform hover:scale-105 btn-glow hover:shadow-xl hover:shadow-blue-500/50"
+            >
+              Contact
+            </button>
+          </nav>
+
+          {/* WhatsApp & Mobile Menu */}
+          <div className="flex items-center space-x-4">
+            <a 
+              href="https://wa.me/447398251847"
+              className="hidden sm:flex items-center space-x-2 text-green-400 hover:text-green-300 transition-colors"
+            >
+              <MessageCircle size={20} />
+              <span className="font-medium">+44 7398 251847</span>
+            </a>
+            
+            <button 
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="md:hidden p-2 rounded-lg hover:bg-gray-800 transition-colors text-white"
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-md shadow-lg border-t border-blue-500/20">
+            <div className="py-4 px-4 space-y-4">
+              <button 
+                onClick={() => scrollToSection('home')}
+                className="block w-full text-left py-2 text-gray-300 hover:text-blue-400 transition-colors font-medium glow-text"
+              >
+                Home
+              </button>
+              <button 
+                onClick={() => scrollToSection('services')}
+                className="block w-full text-left py-2 text-gray-300 hover:text-blue-400 transition-colors font-medium glow-text"
+              >
+                Services
+              </button>
+              <button 
+                onClick={() => scrollToSection('about')}
+                className="block w-full text-left py-2 text-gray-300 hover:text-blue-400 transition-colors font-medium glow-text"
+              >
+                About
+              </button>
+              <button 
+                onClick={handleContactClick}
+                className="block w-full text-left py-2 text-gray-300 hover:text-blue-400 transition-colors font-medium glow-text"
+              >
+                Contact
+              </button>
+              <a 
+                href="https://wa.me/447398251847"
+                className="flex items-center space-x-2 py-2 text-green-400 hover:text-green-300 transition-colors"
+              >
+                <MessageCircle size={20} />
+                <span className="font-medium">WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        )}
+      </div>
+    </header>
+  );
+};
+
+export default Header;
