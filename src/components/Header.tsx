@@ -37,10 +37,6 @@ const Header = () => {
 
   const handleContactClick = () => {
     navigate('/contact');
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
     setIsMenuOpen(false);
   };
 
