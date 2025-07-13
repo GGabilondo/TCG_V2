@@ -34,7 +34,7 @@ const Hero = () => {
           {/* Badge */}
           <div className="inline-flex items-center px-4 py-2 bg-blue-500/20 backdrop-blur-sm rounded-full border border-blue-400/50 text-blue-400 text-sm font-medium mb-8 shadow-lg shadow-blue-500/20">
             <Star className="w-4 h-4 mr-2" />
-            Premium Mobile Service
+            Mobile Valeting & Detailing
           </div>
 
           {/* Title */}
