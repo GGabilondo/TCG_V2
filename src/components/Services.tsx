@@ -11,16 +11,25 @@ const Services = () => {
 
   const services = [
     {
-      name: 'Basic Clean',
-      price: 'From £35',
+      name: 'TCG REFRESH',
+      price: '£90 - £120',
       image: 'https://images.pexels.com/photos/3354648/pexels-photo-3354648.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-      features: [
-        'Exterior hand wash',
-        'Interior vacuum',
-        'Window cleaning',
-        'Tyre shine'
+      exteriorFeatures: [
+        'Wheels, tyres & wheel wells detailed',
+        'Safe two-bucket wash',
+        'Exterior windows cleaned',
+        'Door, boot & bonnet shuts cleaned'
       ],
-      description: 'Essential exterior wash and interior vacuum. Perfect for regular maintenance of your vehicle\'s appearance.',
+      interiorFeatures: [
+        'Boot, carpets & mats hoovered',
+        'Leather seats wiped/cleaned',
+        'Air vents detailed',
+        'Centre console, door cards, and dashboard wiped & cleaned',
+        'Interior windows & mirrors cleaned',
+        'Steering wheel cleaned'
+      ],
+      duration: '2.5 - 4 Hours',
+      description: 'A full interior and exterior refresh without the advanced restoration elements. Ideal for well-kept vehicles or as a seasonal refresh.',
       popular: false
     },
     {
@@ -142,7 +151,7 @@ const Services = () => {
                 </p>
 
                 {/* Features for TCG DEEP CLEAN */}
-                {(service.name === 'TCG DEEP CLEAN' || service.name === 'TCG PROTECT') ? (
+                {(service.name === 'TCG REFRESH' || service.name === 'TCG DEEP CLEAN' || service.name === 'TCG PROTECT') ? (
                   <div className="mb-6">
                     {/* Exterior Features */}
                     <div className="mb-4">
@@ -201,7 +210,7 @@ const Services = () => {
                   onClick={scrollToContact}
                   className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2 group shadow-lg shadow-blue-500/20 hover:shadow-blue-500/30 btn-glow"
                 >
-                  <span>Book {service.name === 'TCG DEEP CLEAN' ? 'Deep Clean' : service.name === 'TCG PROTECT' ? 'TCG PROTECT' : service.name}</span>
+                  <span>Book {service.name === 'TCG REFRESH' ? 'TCG REFRESH' : service.name === 'TCG DEEP CLEAN' ? 'TCG DEEP CLEAN' : service.name === 'TCG PROTECT' ? 'TCG PROTECT' : service.name}</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>
