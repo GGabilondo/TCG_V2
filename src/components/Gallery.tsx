@@ -108,11 +108,6 @@ const Gallery = () => {
             <ChevronRight className="w-7 h-7" />
           </button>
         </div>
-              </div>
-            ))}
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
