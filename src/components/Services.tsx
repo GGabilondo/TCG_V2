@@ -135,15 +135,11 @@ const Services = () => {
                   className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                <div className="absolute bottom-4 left-4 text-white font-bold text-lg">
-                  {service.name.toUpperCase()}
-                </div>
               </div>
 
               <div className="p-6">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-bold text-white">{service.name}</h3>
-                  <span className="text-2xl font-bold text-blue-400">{service.price}</span>
                 </div>
 
                 <p className="text-gray-300 mb-4 text-sm leading-relaxed">
