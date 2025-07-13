@@ -12,7 +12,7 @@ const Services = () => {
   const services = [
     {
       name: 'TCG REFRESH',
-      image: 'https://images.pexels.com/photos/13065690/pexels-photo-13065690.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+      image: '/src/assets/interior_cleaning_audi-tiruy55r copy.png',
       image: 'https://images.pexels.com/photos/3354648/pexels-photo-3354648.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
       exteriorFeatures: [
         'Wheels, tyres & wheel wells detailed',
