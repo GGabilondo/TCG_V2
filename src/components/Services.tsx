@@ -27,16 +27,30 @@ const Services = () => {
       name: 'TCG DEEP CLEAN',
       price: '£150 - £175',
       image: 'https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-      features: [
-        'Complete exterior detailing & engine bay',
-        'Wheels, tyres & exhaust tips polished',
-        'Safe wash with 3-month paint protection',
-        'All windows & trim restoration',
-        'Full interior steam cleaning',
-        'Leather conditioning & fabric treatment',
-        'Dashboard, console & air vents detailed',
-        'Comprehensive stain removal'
+      exteriorFeatures: [
+        'Engine bay cleaned',
+        'Wheels, tyres & wheel wells detailed',
+        'Safe two-bucket wash',
+        'Exhaust tips polished',
+        '3-month paint protection applied',
+        'Exterior windows cleaned',
+        'Door, boot & bonnet shuts cleaned',
+        'Faded exterior trim dressed and restored'
       ],
+      interiorFeatures: [
+        'Boot hoovered & steam cleaned',
+        'Carpets & mats hoovered & steam cleaned',
+        'Leather seats steam cleaned & conditioned',
+        'Fabric seats steam cleaned',
+        'Stain removal where required',
+        'Air vents detailed',
+        'Centre console cleaned & detailed',
+        'Door cards & interior doors cleaned',
+        'Interior windows & mirrors cleaned',
+        'Dashboard cleaned',
+        'Steering wheel deep cleaned'
+      ],
+      duration: '4 - 7 Hours',
       description: 'Comprehensive cleaning inside and out. Our most popular service for discerning vehicle owners. Duration: 4-7 hours.',
       popular: true
     },
@@ -107,14 +121,61 @@ const Services = () => {
                   {service.description}
                 </p>
 
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                      <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+                {/* Features for TCG DEEP CLEAN */}
+                {service.name === 'TCG DEEP CLEAN' ? (
+                  <div className="mb-6">
+                    {/* Exterior Features */}
+                    <div className="mb-4">
+                      <h4 className="text-blue-400 font-semibold text-sm mb-2 uppercase tracking-wide">Exterior</h4>
+                      <ul className="space-y-1">
+                        {service.exteriorFeatures?.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-center text-xs text-gray-300">
+                            <Check className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0" />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    {/* Interior Features */}
+                    <div className="mb-4">
+                      <h4 className="text-blue-400 font-semibold text-sm mb-2 uppercase tracking-wide">Interior</h4>
+                      <ul className="space-y-1">
+                        {service.interiorFeatures?.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-center text-xs text-gray-300">
+                            <Check className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0" />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    {/* Duration & Price Highlight */}
+                    <div className="bg-blue-500/10 border border-blue-400/30 rounded-lg p-3 mb-4">
+                      <div className="flex justify-between items-center">
+                        <div className="text-center flex-1">
+                          <div className="text-blue-400 text-xs font-medium uppercase tracking-wide">Duration</div>
+                          <div className="text-white font-bold">{service.duration}</div>
+                        </div>
+                        <div className="w-px h-8 bg-blue-400/30"></div>
+                        <div className="text-center flex-1">
+                          <div className="text-blue-400 text-xs font-medium uppercase tracking-wide">Price</div>
+                          <div className="text-white font-bold">{service.price}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  /* Regular features for other services */
+                  <ul className="space-y-2 mb-6">
+                    {service.features?.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                )}
 
                 <button 
                   onClick={scrollToContact}
