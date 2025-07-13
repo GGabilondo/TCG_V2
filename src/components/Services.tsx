@@ -12,7 +12,7 @@ const Services = () => {
   const services = [
     {
       name: 'TCG REFRESH',
-      price: '£90 - £120',
+      image: 'https://images.pexels.com/photos/13065690/pexels-photo-13065690.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
       image: 'https://images.pexels.com/photos/3354648/pexels-photo-3354648.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
       exteriorFeatures: [
         'Wheels, tyres & wheel wells detailed',
@@ -35,7 +35,7 @@ const Services = () => {
     {
       name: 'TCG DEEP CLEAN',
       price: '£150 - £175',
-      image: 'https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+      image: 'https://images.pexels.com/photos/5835359/pexels-photo-5835359.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
       exteriorFeatures: [
         'Engine bay cleaned',
         'Wheels, tyres & wheel wells detailed',
@@ -68,7 +68,7 @@ const Services = () => {
       price: 'From £120',
       image: 'https://images.pexels.com/photos/3354648/pexels-photo-3354648.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
       name: 'TCG PROTECT',
-      price: '£240 - £280',
+      image: 'https://images.pexels.com/photos/6872149/pexels-photo-6872149.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
       exteriorFeatures: [
         'Engine bay cleaned',
         'Wheels, tyres & wheel wells details',
