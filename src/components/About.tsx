@@ -16,7 +16,7 @@ const About = () => {
     {
       icon: Leaf,
       title: 'Eco-Friendly Products',
-      description: 'High-quality, environmentally conscious cleaning'
+      description: 'High-quality conscious cleaning'
     },
     {
       icon: Clock,
