@@ -76,21 +76,6 @@ const About = () => {
                 <p className="text-lg">Mobile Valeting & Detailing</p>
               </div>
             </div>
-            
-            {/* Floating Stats */}
-            <div className="absolute -top-4 -right-4 bg-gray-800 rounded-lg shadow-lg shadow-blue-500/20 p-4 border border-blue-400/30">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-blue-400">8+</div>
-                <div className="text-sm text-gray-300">Years</div>
-              </div>
-            </div>
-            
-            <div className="absolute -bottom-4 -left-4 bg-gray-800 rounded-lg shadow-lg shadow-blue-500/20 p-4 border border-blue-400/30">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-blue-400">500+</div>
-                <div className="text-sm text-gray-300">Clients</div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
