@@ -115,9 +115,8 @@ const Footer = () => {
             <h3 className="text-2xl font-bold mb-6">Book Your Service</h3>
             <form 
               name="footer-contact" 
-              method="POST" 
-              data-netlify="true" 
-              data-netlify-honeypot="bot-field"
+              netlify
+              netlify-honeypot="bot-field"
               onSubmit={handleSubmit} 
               className="space-y-4"
             >
