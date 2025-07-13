@@ -85,27 +85,27 @@ const Hero = () => {
           </div>
 
           {/* Stats */}
-          <div className="hidden md:grid md:grid-cols-1 md:sm:grid-cols-3 md:gap-6 md:max-w-2xl md:mx-auto">
-            <div className="hidden md:block md:text-center">
-              <div className="hidden md:flex md:items-center md:justify-center md:mb-2">
-                <Clock className="hidden md:block md:w-6 md:h-6 md:text-blue-400 md:mr-2" />
-                <span className="hidden md:block md:text-3xl md:font-bold md:text-white">8+</span>
+          <div className="hidden md:flex md:justify-center md:items-center md:space-x-12 md:max-w-4xl md:mx-auto">
+            <div className="text-center">
+              <div className="flex items-center justify-center mb-2">
+                <Clock className="w-6 h-6 text-blue-400 mr-2" />
+                <span className="text-3xl font-bold text-white">8+</span>
               </div>
-              <p className="hidden md:block md:text-gray-200">Years Experience</p>
+              <p className="text-gray-200">Years Experience</p>
             </div>
-            <div className="hidden md:block md:text-center">
-              <div className="hidden md:flex md:items-center md:justify-center md:mb-2">
-                <Users className="hidden md:block md:w-6 md:h-6 md:text-blue-400 md:mr-2" />
-                <span className="hidden md:block md:text-3xl md:font-bold md:text-white">500+</span>
+            <div className="text-center">
+              <div className="flex items-center justify-center mb-2">
+                <Users className="w-6 h-6 text-blue-400 mr-2" />
+                <span className="text-3xl font-bold text-white">500+</span>
               </div>
-              <p className="hidden md:block md:text-gray-200">Happy Clients</p>
+              <p className="text-gray-200">Happy Clients</p>
             </div>
-            <div className="hidden md:block md:text-center">
-              <div className="hidden md:flex md:items-center md:justify-center md:mb-2">
-                <Star className="hidden md:block md:w-6 md:h-6 md:text-blue-400 md:mr-2" />
-                <span className="hidden md:block md:text-3xl md:font-bold md:text-white">4.8★</span>
+            <div className="text-center">
+              <div className="flex items-center justify-center mb-2">
+                <Star className="w-6 h-6 text-blue-400 mr-2" />
+                <span className="text-3xl font-bold text-white">4.8★</span>
               </div>
-              <p className="hidden md:block md:text-gray-200">Google Rating</p>
+              <p className="text-gray-200">Google Rating</p>
             </div>
           </div>
         </div>
