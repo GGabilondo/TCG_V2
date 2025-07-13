@@ -63,43 +63,43 @@ const Hero = () => {
             </button>
             <button 
               onClick={scrollToServices}
-              className="group bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-500/20 transition-all duration-300 border border-white/20 hover:border-blue-400/40 btn-glow hover:shadow-lg hover:shadow-blue-500/30"
+              className="hidden md:group md:bg-white/10 md:backdrop-blur-sm md:text-white md:px-8 md:py-4 md:rounded-full md:font-semibold md:hover:bg-blue-500/20 md:transition-all md:duration-300 md:border md:border-white/20 md:hover:border-blue-400/40 md:btn-glow md:hover:shadow-lg md:hover:shadow-blue-500/30 md:flex md:items-center"
             >
               View Services
             </button>
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto">
-            <div className="text-center">
-              <div className="flex items-center justify-center mb-2">
-                <Clock className="w-6 h-6 text-blue-400 mr-2" />
-                <span className="text-3xl font-bold text-white">8+</span>
+          <div className="hidden md:grid md:grid-cols-1 md:sm:grid-cols-3 md:gap-6 md:max-w-2xl md:mx-auto">
+            <div className="hidden md:block md:text-center">
+              <div className="hidden md:flex md:items-center md:justify-center md:mb-2">
+                <Clock className="hidden md:block md:w-6 md:h-6 md:text-blue-400 md:mr-2" />
+                <span className="hidden md:block md:text-3xl md:font-bold md:text-white">8+</span>
               </div>
-              <p className="text-gray-200">Years Experience</p>
+              <p className="hidden md:block md:text-gray-200">Years Experience</p>
             </div>
-            <div className="text-center">
-              <div className="flex items-center justify-center mb-2">
-                <Users className="w-6 h-6 text-blue-400 mr-2" />
-                <span className="text-3xl font-bold text-white">500+</span>
+            <div className="hidden md:block md:text-center">
+              <div className="hidden md:flex md:items-center md:justify-center md:mb-2">
+                <Users className="hidden md:block md:w-6 md:h-6 md:text-blue-400 md:mr-2" />
+                <span className="hidden md:block md:text-3xl md:font-bold md:text-white">500+</span>
               </div>
-              <p className="text-gray-200">Happy Clients</p>
+              <p className="hidden md:block md:text-gray-200">Happy Clients</p>
             </div>
-            <div className="text-center">
-              <div className="flex items-center justify-center mb-2">
-                <Star className="w-6 h-6 text-blue-400 mr-2" />
-                <span className="text-3xl font-bold text-white">4.8★</span>
+            <div className="hidden md:block md:text-center">
+              <div className="hidden md:flex md:items-center md:justify-center md:mb-2">
+                <Star className="hidden md:block md:w-6 md:h-6 md:text-blue-400 md:mr-2" />
+                <span className="hidden md:block md:text-3xl md:font-bold md:text-white">4.8★</span>
               </div>
-              <p className="text-gray-200">Google Rating</p>
+              <p className="hidden md:block md:text-gray-200">Google Rating</p>
             </div>
           </div>
         </div>
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-blue-400/50 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-blue-400/80 rounded-full mt-2"></div>
+      <div className="hidden md:block md:absolute md:bottom-8 md:left-1/2 md:transform md:-translate-x-1/2 md:animate-bounce">
+        <div className="hidden md:block md:w-6 md:h-10 md:border-2 md:border-blue-400/50 md:rounded-full md:flex md:justify-center">
+          <div className="hidden md:block md:w-1 md:h-3 md:bg-blue-400/80 md:rounded-full md:mt-2"></div>
         </div>
       </div>
     </section>
