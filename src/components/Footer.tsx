@@ -11,25 +11,8 @@ const Footer = () => {
   });
 
   const handleSubmit = (e: React.FormEvent) => {
-    // For Netlify forms, we need to handle the submission differently
-    const form = e.target as HTMLFormElement;
-    
-    // Check if this is a Netlify form submission
-    if (form.getAttribute('data-netlify') === 'true') {
-      // Let Netlify handle the form submission
-      return;
-    }
-    
-    // Fallback: prevent default and show success message
-    e.preventDefault();
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      service: '',
-      message: ''
-    });
-    alert('Thank you for your booking request! We will contact you soon.');
+    // Let Netlify handle the form submission
+    // Don't prevent default - let the form submit naturally
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -123,15 +106,13 @@ const Footer = () => {
           <div className="bg-gray-900 rounded-lg p-6 border border-gray-800">
             <h3 className="text-2xl font-bold mb-6">Book Your Service</h3>
             <form 
-             name="footer-contact"
-             method="POST"
-             data-netlify="true"
-             data-netlify-honeypot="bot-field"
+              name="footer-contact"
+              method="POST"
+              netlify
+              netlify-honeypot="bot-field"
               onSubmit={handleSubmit} 
               className="space-y-4"
             >
-              <input type="hidden" name="form-name" value="footer-contact" />
-             <input type="hidden" name="bot-field" />
               <input
                 type="text"
                 name="name"
@@ -184,7 +165,7 @@ const Footer = () => {
                 type="submit"
                 className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2 group shadow-lg shadow-blue-500/30 btn-glow hover:shadow-xl hover:shadow-blue-500/50"
               >
-                <span>Book Now</span>
+                <span>Quick Book</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
             </form>

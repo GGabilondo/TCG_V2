@@ -17,31 +17,8 @@ const ContactPage = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
-    // For Netlify forms, we need to handle the submission differently
-    const form = e.target as HTMLFormElement;
-    
-    // Check if this is a Netlify form submission
-    if (form.getAttribute('data-netlify') === 'true') {
-      // Let Netlify handle the form submission
-      return;
-    }
-    
-    // Fallback: prevent default and show success message
-    e.preventDefault();
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        service: '',
-        location: '',
-        date: '',
-        time: '',
-        message: ''
-      });
-    }, 3000);
+    // Let Netlify handle the form submission
+    // Don't prevent default - let the form submit naturally
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -176,13 +153,11 @@ const ContactPage = () => {
                 <form 
                   name="contact-form"
                   method="POST"
-                  data-netlify="true"
-                  data-netlify-honeypot="bot-field"
+                  netlify
+                  netlify-honeypot="bot-field"
                   onSubmit={handleSubmit} 
                   className="space-y-6"
                 >
-                  <input type="hidden" name="form-name" value="contact-form" />
-                  <input type="hidden" name="bot-field" />
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <input
                       type="text"
@@ -280,7 +255,7 @@ const ContactPage = () => {
                     type="submit"
                     className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2 group shadow-lg shadow-blue-500/30 btn-glow hover:shadow-xl hover:shadow-blue-500/50 transform hover:scale-105"
                   >
-                    <span>Book Your Service</span>
+                    <span>Submit Booking Request</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </form>
