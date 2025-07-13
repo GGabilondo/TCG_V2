@@ -18,6 +18,14 @@ const Gallery = () => {
 
   const galleryItems = [
     {
+      image: '/images/IMG_2615.JPG',
+      label: 'Premium Detailing'
+    },
+    {
+      image: '/images/IMG_2071.PNG',
+      label: 'Professional Results'
+    },
+    {
       image: '/images/interior_cleaning_audi-tiruy55r.png',
       label: 'Exterior Detailing'
     },
