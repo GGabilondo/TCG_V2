@@ -157,9 +157,9 @@ const Footer = () => {
                 className="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
               >
                 <option value="">Select Service</option>
-                <option value="Basic Clean">Basic Clean</option>
-                <option value="Full Clean">Full Clean</option>
-                <option value="Deep Clean">Deep Clean</option>
+                <option value="TCG REFRESH">TCG REFRESH</option>
+                <option value="TCG DEEP CLEAN">TCG DEEP CLEAN</option>
+                <option value="TCG PROTECT">TCG PROTECT</option>
                 <option value="Maintenance Service">Maintenance Service</option>
               </select>
               <textarea
