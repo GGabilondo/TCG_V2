@@ -12,6 +12,7 @@ const Services = () => {
   const services = [
     {
       name: 'TCG REFRESH',
+      price: '£90 - £120',
       image: '/src/assets/interior_cleaning_audi-tiruy55r copy.png',
       exteriorFeatures: [
         'Wheels, tyres & wheel wells detailed',
@@ -64,6 +65,7 @@ const Services = () => {
     },
     {
       name: 'TCG PROTECT',
+      price: '£240 - £280',
       image: '/src/assets/interior_cleaning_audi_lamborghini-1snl2-jc.png',
       exteriorFeatures: [
         'Engine bay cleaned',
