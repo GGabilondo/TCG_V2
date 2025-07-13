@@ -24,17 +24,31 @@ const Services = () => {
       popular: false
     },
     {
-      name: 'Full Clean',
-      price: 'From £65',
+      name: 'TCG DEEP CLEAN',
+      price: '£150 - £175',
       image: 'https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
       features: [
-        'Complete exterior detailing',
-        'Deep interior cleaning',
-        'Leather conditioning',
-        'Engine bay cleaning',
-        'Protective wax application'
+        'Engine bay cleaned',
+        'Wheels, tyres & wheel wells detailed',
+        'Safe two-bucket wash',
+        'Exhausts tips polished',
+        '3-month paint protection applied',
+        'Exterior windows cleaned',
+        'Door, boot & bonnet shuts cleaned',
+        'Faded exterior trim dressed and restored',
+        'Boot hoovered & steam cleaned',
+        'Carpets & mats hoovered & steam cleaned',
+        'Leather seats steam cleaned & conditioned',
+        'Fabric seats steam cleaned',
+        'Stain removal where required',
+        'Air vents detailed',
+        'Centre console cleaned & detailed',
+        'Door cards & interior doors cleaned',
+        'Interior windows & mirrors cleaned',
+        'Dashboard cleaned',
+        'Steering wheel deep cleaned'
       ],
-      description: 'Comprehensive cleaning inside and out. Our most popular service for discerning vehicle owners.',
+      description: 'Comprehensive cleaning inside and out. Our most popular service for discerning vehicle owners. Duration: 4-7 hours.',
       popular: true
     },
     {
@@ -117,7 +131,7 @@ const Services = () => {
                   onClick={scrollToContact}
                   className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2 group shadow-lg shadow-blue-500/20 hover:shadow-blue-500/30 btn-glow"
                 >
-                  <span>Book {service.name}</span>
+                  <span>Book {service.name === 'TCG DEEP CLEAN' ? 'Deep Clean' : service.name}</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>
