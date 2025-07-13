@@ -210,9 +210,9 @@ const ContactPage = () => {
                       className="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 hover:border-blue-400/50"
                     >
                       <option value="">Select Service *</option>
-                      <option value="Basic Clean">Basic Clean (From £35)</option>
-                      <option value="Full Clean">Full Clean (From £65)</option>
-                      <option value="Deep Clean">Deep Clean (From £120)</option>
+                      <option value="TCG REFRESH">TCG REFRESH (£90 - £120)</option>
+                      <option value="TCG DEEP CLEAN">TCG DEEP CLEAN (£150 - £175)</option>
+                      <option value="TCG PROTECT">TCG PROTECT (£240 - £280)</option>
                       <option value="Maintenance Service">Maintenance Service</option>
                     </select>
                   </div>
