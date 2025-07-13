@@ -72,6 +72,16 @@
   .btn-glow:hover::before {
     left: 100%;
   }
+
+  /* Hide scrollbar for gallery */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 /* Custom scrollbar */

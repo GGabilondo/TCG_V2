@@ -1,6 +1,21 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const Gallery = () => {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  const scrollLeft = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: -320, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: 320, behavior: 'smooth' });
+    }
+  };
+
   const galleryItems = [
     {
       image: 'https://images.pexels.com/photos/3354648/pexels-photo-3354648.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
@@ -53,9 +68,30 @@ const Gallery = () => {
         </div>
 
         {/* Gallery */}
-        <div className="relative overflow-hidden">
-          <div className="flex space-x-6 animate-scroll">
-            {[...galleryItems, ...galleryItems].map((item, index) => (
+        <div className="relative">
+          {/* Left Arrow */}
+          <button
+            onClick={scrollLeft}
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-black/80 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-blue-500/80 transition-all duration-300 shadow-lg hover:shadow-blue-500/30 border border-gray-700 hover:border-blue-400"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+
+          {/* Right Arrow */}
+          <button
+            onClick={scrollRight}
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-black/80 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-blue-500/80 transition-all duration-300 shadow-lg hover:shadow-blue-500/30 border border-gray-700 hover:border-blue-400"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+
+          <div 
+            ref={scrollContainerRef}
+            className="overflow-x-auto scrollbar-hide"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
+            <div className="flex space-x-6 pb-4">
+            {galleryItems.map((item, index) => (
               <div key={index} className="flex-shrink-0 w-80 h-60 relative group cursor-pointer">
                 <img 
                   src={item.image} 
@@ -68,6 +104,7 @@ const Gallery = () => {
                 </div>
               </div>
             ))}
+            </div>
           </div>
         </div>
       </div>
