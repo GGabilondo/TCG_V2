@@ -34,7 +34,7 @@ const Services = () => {
     {
       name: 'TCG DEEP CLEAN',
       price: '£150 - £175',
-      image: 'https://images.pexels.com/photos/5835359/pexels-photo-5835359.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+      image: '/src/assets/interior_cleaning_audi_q8-by5jxqk1.png',
       exteriorFeatures: [
         'Engine bay cleaned',
         'Wheels, tyres & wheel wells detailed',
