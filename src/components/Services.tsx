@@ -51,7 +51,7 @@ const Services = () => {
         'Steering wheel deep cleaned'
       ],
       duration: '4 - 7 Hours',
-      description: 'Comprehensive cleaning inside and out. Our most popular service for discerning vehicle owners. Duration: 4-7 hours.',
+      description: 'Comprehensive cleaning inside and out. Our most popular service for discerning vehicle owners.',
       popular: true
     },
     {
