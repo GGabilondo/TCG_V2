@@ -13,7 +13,7 @@ const Services = () => {
     {
       name: 'TCG REFRESH',
       price: '£90 - £120',
-      image: '/src/assets/interior_cleaning_audi-tiruy55r copy.png',
+      image: 'https://images.pexels.com/photos/3354648/pexels-photo-3354648.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
       exteriorFeatures: [
         'Wheels, tyres & wheel wells detailed',
         'Safe two-bucket wash',
@@ -35,7 +35,7 @@ const Services = () => {
     {
       name: 'TCG DEEP CLEAN',
       price: '£150 - £175',
-      image: '/src/assets/interior_cleaning_audi_q8-by5jxqk1.png',
+      image: 'https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
       exteriorFeatures: [
         'Engine bay cleaned',
         'Wheels, tyres & wheel wells detailed',
@@ -66,7 +66,7 @@ const Services = () => {
     {
       name: 'TCG PROTECT',
       price: '£240 - £280',
-      image: '/src/assets/interior_cleaning_audi_lamborghini-1snl2-jc.png',
+      image: 'https://images.pexels.com/photos/3354648/pexels-photo-3354648.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
       exteriorFeatures: [
         'Engine bay cleaned',
         'Wheels, tyres & wheel wells details',
