@@ -17,25 +17,6 @@ const ContactPage = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Create mailto link with both recipients
-    const subject = encodeURIComponent(`New Booking Request - ${formData.service}`);
-    const body = encodeURIComponent(`
-Name: ${formData.name}
-Email: ${formData.email}
-Phone: ${formData.phone}
-Service: ${formData.service}
-Location: ${formData.location}
-Preferred Date: ${formData.date}
-Preferred Time: ${formData.time}
-Message: ${formData.message}
-
-Submitted from: TCG CarCare Website Contact Form
-    `);
-    
-    // Open email client with both recipients
-    window.open(`mailto:info@tcgcarcare.co.uk,hola@remedio.studio?subject=${subject}&body=${body}`);
-    
     setIsSubmitted(true);
     setTimeout(() => {
       setIsSubmitted(false);
@@ -181,7 +162,16 @@ Submitted from: TCG CarCare Website Contact Form
                   <p className="text-gray-300">Thank you for choosing TCG CarCare. We'll contact you within 2 hours to confirm your appointment.</p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form 
+                  name="contact" 
+                  method="POST" 
+                  data-netlify="true" 
+                  data-netlify-honeypot="bot-field"
+                  onSubmit={handleSubmit} 
+                  className="space-y-6"
+                >
+                  <input type="hidden" name="form-name" value="contact" />
+                  <input type="hidden" name="bot-field" />
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <input
                       type="text"

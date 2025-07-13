@@ -12,22 +12,6 @@ const Footer = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Create mailto link with both recipients
-    const subject = encodeURIComponent(`New Service Inquiry - ${formData.service}`);
-    const body = encodeURIComponent(`
-Name: ${formData.name}
-Email: ${formData.email}
-Phone: ${formData.phone}
-Service: ${formData.service}
-Message: ${formData.message}
-
-Submitted from: TCG CarCare Website Footer Form
-    `);
-    
-    // Open email client with both recipients
-    window.open(`mailto:info@tcgcarcare.co.uk,hola@remedio.studio?subject=${subject}&body=${body}`);
-    
     // Reset form
     setFormData({
       name: '',
@@ -129,7 +113,16 @@ Submitted from: TCG CarCare Website Footer Form
           {/* Contact Form */}
           <div className="bg-gray-900 rounded-lg p-6 border border-gray-800">
             <h3 className="text-2xl font-bold mb-6">Book Your Service</h3>
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form 
+              name="footer-contact" 
+              method="POST" 
+              data-netlify="true" 
+              data-netlify-honeypot="bot-field"
+              onSubmit={handleSubmit} 
+              className="space-y-4"
+            >
+              <input type="hidden" name="form-name" value="footer-contact" />
+              <input type="hidden" name="bot-field" />
               <input
                 type="text"
                 name="name"
