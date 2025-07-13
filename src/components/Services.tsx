@@ -58,12 +58,29 @@ const Services = () => {
       name: 'Deep Clean',
       price: 'From £120',
       image: 'https://images.pexels.com/photos/3354648/pexels-photo-3354648.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-      features: [
-        'Paint correction & polishing',
-        'Ceramic coating application',
-        'Complete interior restoration',
-        'Headlight restoration',
-        'Premium protection package'
+      exteriorFeatures: [
+        'Engine bay cleaned',
+        'Wheels, tyres & wheel wells details',
+        'Safe two-bucket wash',
+        'Paint Decontamination Chemical',
+        'Paint Decontamination Clay Bar',
+        '1 Year Ceramic Coating Applied',
+        'Exhaust tips polished',
+        'Exterior windows cleaned',
+        'Door, boot & bonnet shuts cleaned',
+        'Faded exterior trim dressed and restored'
+      ],
+      interiorFeatures: [
+        'Boot hovered & steam cleaned',
+        'Carpets & mats hoovered & steam cleaned',
+        'Leather seats steam cleaned & conditioned',
+        'Fabric seats steam cleaned',
+        'Stain removal where required',
+        'Air vents detailed',
+        'Centre console cleaned & detailed',
+        'Door cards & interior doors cleaned',
+        'Interior windows & mirrors cleaned',
+        'Dashboard cleaned & dressed'
       ],
       description: 'Ultimate restoration service. Transform your vehicle back to showroom condition with our premium treatment.',
       popular: false
