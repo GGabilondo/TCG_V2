@@ -188,9 +188,15 @@ const ContactPage = () => {
                 </div>
               ) : (
                 <form 
+                 name="contact-form"
+                 method="POST"
+                 data-netlify="true"
+                 data-netlify-honeypot="bot-field"
                   onSubmit={handleSubmit} 
                   className="space-y-6"
                 >
+                 <input type="hidden" name="form-name" value="contact-form" />
+                 <input type="hidden" name="bot-field" />
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <input
                       type="text"

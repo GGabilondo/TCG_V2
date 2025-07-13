@@ -114,14 +114,15 @@ const Footer = () => {
           <div className="bg-gray-900 rounded-lg p-6 border border-gray-800">
             <h3 className="text-2xl font-bold mb-6">Book Your Service</h3>
             <form 
-              name="footer-contact" 
-              netlify
-              netlify-honeypot="bot-field"
+             name="footer-contact"
+             method="POST"
+             data-netlify="true"
+             data-netlify-honeypot="bot-field"
               onSubmit={handleSubmit} 
               className="space-y-4"
             >
               <input type="hidden" name="form-name" value="footer-contact" />
-              <input type="hidden" name="bot-field" />
+             <input type="hidden" name="bot-field" />
               <input
                 type="text"
                 name="name"
