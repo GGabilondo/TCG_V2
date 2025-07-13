@@ -72,7 +72,7 @@ const Gallery = () => {
           {/* Left Arrow */}
           <button
             onClick={scrollLeft}
-            className="w-14 h-14 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/50 transform hover:scale-105 btn-glow"
+            className="hidden md:flex w-14 h-14 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full items-center justify-center text-white hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/50 transform hover:scale-105 btn-glow"
           >
             <ChevronLeft className="w-7 h-7" />
           </button>
@@ -80,7 +80,7 @@ const Gallery = () => {
           {/* Gallery Container */}
           <div 
             ref={scrollContainerRef}
-            className="flex-1 overflow-x-auto scrollbar-hide"
+            className="flex-1 overflow-x-auto scrollbar-hide md:scrollbar-hide"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             <div className="flex space-x-6 pb-4">
@@ -103,7 +103,7 @@ const Gallery = () => {
           {/* Right Arrow */}
           <button
             onClick={scrollRight}
-            className="w-14 h-14 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/50 transform hover:scale-105 btn-glow"
+            className="hidden md:flex w-14 h-14 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full items-center justify-center text-white hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/50 transform hover:scale-105 btn-glow"
           >
             <ChevronRight className="w-7 h-7" />
           </button>
