@@ -172,7 +172,7 @@ const Services = () => {
                     </div>
                     
                     {/* Duration & Price Highlight */}
-                    <div className="bg-blue-500/10 border border-blue-400/30 rounded-lg p-3 mb-4">
+                    <div className="bg-blue-500/10 border border-blue-400/30 rounded-lg p-3 mb-4 mt-4">
                       <div className="flex justify-between items-center">
                         <div className="text-center flex-1">
                           <div className="text-blue-400 text-xs font-medium uppercase tracking-wide">Duration</div>
