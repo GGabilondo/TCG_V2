@@ -38,6 +38,7 @@ const Header = () => {
   const handleContactClick = () => {
     navigate('/contact');
     setIsMenuOpen(false);
+    window.scrollTo(0, 0);
   };
 
   return (
