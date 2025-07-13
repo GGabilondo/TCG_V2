@@ -66,7 +66,7 @@ const About = () => {
           <div className="relative">
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <img 
-                src="https://images.pexels.com/photos/3354648/pexels-photo-3354648.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" 
+                src="/src/assets/11-cz_a1h-z.png" 
                 alt="TCG CarCare mobile service" 
                 className="w-full h-full object-cover"
               />
