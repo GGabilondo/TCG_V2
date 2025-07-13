@@ -68,40 +68,46 @@ const Gallery = () => {
         </div>
 
         {/* Gallery */}
-        <div className="relative">
+        <div className="flex items-center space-x-6">
           {/* Left Arrow */}
           <button
             onClick={scrollLeft}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-black/80 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-blue-500/80 transition-all duration-300 shadow-lg hover:shadow-blue-500/30 border border-gray-700 hover:border-blue-400"
+            className="w-14 h-14 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/50 transform hover:scale-105 btn-glow"
           >
-            <ChevronLeft className="w-6 h-6" />
+            <ChevronLeft className="w-7 h-7" />
           </button>
+
+          {/* Gallery Container */}
+          <div 
+            ref={scrollContainerRef}
+            className="flex-1 overflow-x-auto scrollbar-hide"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
+            <div className="flex space-x-6 pb-4">
+              {galleryItems.map((item, index) => (
+                <div key={index} className="flex-shrink-0 w-80 h-60 relative group cursor-pointer">
+                  <img 
+                    src={item.image} 
+                    alt={item.label}
+                    className="w-full h-full object-cover rounded-lg shadow-lg group-hover:shadow-xl group-hover:shadow-blue-500/20 transition-all duration-300 border border-gray-800"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute bottom-4 left-4 text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    {item.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
 
           {/* Right Arrow */}
           <button
             onClick={scrollRight}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-black/80 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-blue-500/80 transition-all duration-300 shadow-lg hover:shadow-blue-500/30 border border-gray-700 hover:border-blue-400"
+            className="w-14 h-14 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/50 transform hover:scale-105 btn-glow"
           >
-            <ChevronRight className="w-6 h-6" />
+            <ChevronRight className="w-7 h-7" />
           </button>
-
-          <div 
-            ref={scrollContainerRef}
-            className="overflow-x-auto scrollbar-hide"
-            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-          >
-            <div className="flex space-x-6 pb-4">
-            {galleryItems.map((item, index) => (
-              <div key={index} className="flex-shrink-0 w-80 h-60 relative group cursor-pointer">
-                <img 
-                  src={item.image} 
-                  alt={item.label}
-                  className="w-full h-full object-cover rounded-lg shadow-lg group-hover:shadow-xl group-hover:shadow-blue-500/20 transition-all duration-300 border border-gray-800"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-4 left-4 text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  {item.label}
-                </div>
+        </div>
               </div>
             ))}
             </div>
