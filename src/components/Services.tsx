@@ -58,6 +58,8 @@ const Services = () => {
       name: 'Deep Clean',
       price: 'From £120',
       image: 'https://images.pexels.com/photos/3354648/pexels-photo-3354648.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+      name: 'TCG PROTECT',
+      price: '£240 - £280',
       exteriorFeatures: [
         'Engine bay cleaned',
         'Wheels, tyres & wheel wells details',
@@ -82,6 +84,7 @@ const Services = () => {
         'Interior windows & mirrors cleaned',
         'Dashboard cleaned & dressed'
       ],
+      duration: '7 - 8 Hours',
       description: 'Ultimate restoration service. Transform your vehicle back to showroom condition with our premium treatment.',
       popular: false
     }
@@ -139,7 +142,7 @@ const Services = () => {
                 </p>
 
                 {/* Features for TCG DEEP CLEAN */}
-                {service.name === 'TCG DEEP CLEAN' ? (
+                {(service.name === 'TCG DEEP CLEAN' || service.name === 'TCG PROTECT') ? (
                   <div className="mb-6">
                     {/* Exterior Features */}
                     <div className="mb-4">
@@ -198,7 +201,7 @@ const Services = () => {
                   onClick={scrollToContact}
                   className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2 group shadow-lg shadow-blue-500/20 hover:shadow-blue-500/30 btn-glow"
                 >
-                  <span>Book {service.name === 'TCG DEEP CLEAN' ? 'Deep Clean' : service.name}</span>
+                  <span>Book {service.name === 'TCG DEEP CLEAN' ? 'Deep Clean' : service.name === 'TCG PROTECT' ? 'TCG PROTECT' : service.name}</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>
