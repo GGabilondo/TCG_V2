@@ -63,11 +63,8 @@ const Services = () => {
       popular: true
     },
     {
-      name: 'Deep Clean',
-      price: 'From £120',
-      image: 'https://images.pexels.com/photos/3354648/pexels-photo-3354648.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
       name: 'TCG PROTECT',
-      image: 'https://images.pexels.com/photos/6872149/pexels-photo-6872149.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+      image: '/src/assets/interior_cleaning_audi_lamborghini-1snl2-jc.png',
       exteriorFeatures: [
         'Engine bay cleaned',
         'Wheels, tyres & wheel wells details',
