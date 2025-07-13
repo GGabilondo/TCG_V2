@@ -11,8 +11,17 @@ const Footer = () => {
   });
 
   const handleSubmit = (e: React.FormEvent) => {
+    // For Netlify forms, we need to handle the submission differently
+    const form = e.target as HTMLFormElement;
+    
+    // Check if this is a Netlify form submission
+    if (form.getAttribute('data-netlify') === 'true') {
+      // Let Netlify handle the form submission
+      return;
+    }
+    
+    // Fallback: prevent default and show success message
     e.preventDefault();
-    // Reset form
     setFormData({
       name: '',
       email: '',

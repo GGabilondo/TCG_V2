@@ -17,45 +17,31 @@ const ContactPage = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    // For Netlify forms, we need to handle the submission differently
+    const form = e.target as HTMLFormElement;
     
-    // Send email using EmailJS
-    emailjs.send(
-      'YOUR_SERVICE_ID', // You'll need to set this up
-      'YOUR_TEMPLATE_ID', // You'll need to set this up
-      {
-        from_name: formData.name,
-        from_email: formData.email,
-        phone: formData.phone,
-        service: formData.service,
-        location: formData.location,
-        date: formData.date,
-        time: formData.time,
-        message: formData.message,
-        to_email: 'info@tcgcarcare.co.uk'
-      },
-      'YOUR_PUBLIC_KEY' // You'll need to set this up
-    )
-    .then(() => {
-      setIsSubmitted(true);
-      setTimeout(() => {
-        setIsSubmitted(false);
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          service: '',
-          location: '',
-          date: '',
-          time: '',
-          message: ''
-        });
-      }, 3000);
-    })
-    .catch((error) => {
-      console.error('Email sending failed:', error);
-      alert('There was an error sending your message. Please try again or contact us directly.');
-    });
+    // Check if this is a Netlify form submission
+    if (form.getAttribute('data-netlify') === 'true') {
+      // Let Netlify handle the form submission
+      return;
+    }
+    
+    // Fallback: prevent default and show success message
+    e.preventDefault();
+    setIsSubmitted(true);
+    setTimeout(() => {
+      setIsSubmitted(false);
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        service: '',
+        location: '',
+        date: '',
+        time: '',
+        message: ''
+      });
+    }, 3000);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -188,15 +174,15 @@ const ContactPage = () => {
                 </div>
               ) : (
                 <form 
-                 name="contact-form"
-                 method="POST"
-                 data-netlify="true"
-                 data-netlify-honeypot="bot-field"
+                  name="contact-form"
+                  method="POST"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
                   onSubmit={handleSubmit} 
                   className="space-y-6"
                 >
-                 <input type="hidden" name="form-name" value="contact-form" />
-                 <input type="hidden" name="bot-field" />
+                  <input type="hidden" name="form-name" value="contact-form" />
+                  <input type="hidden" name="bot-field" />
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <input
                       type="text"
