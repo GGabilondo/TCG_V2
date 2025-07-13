@@ -12,8 +12,22 @@ const Footer = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+    
+    // Create mailto link with both recipients
+    const subject = encodeURIComponent(`New Service Inquiry - ${formData.service}`);
+    const body = encodeURIComponent(`
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Service: ${formData.service}
+Message: ${formData.message}
+
+Submitted from: TCG CarCare Website Footer Form
+    `);
+    
+    // Open email client with both recipients
+    window.open(`mailto:info@tcgcarcare.co.uk,hola@remedio.studio?subject=${subject}&body=${body}`);
+    
     // Reset form
     setFormData({
       name: '',
