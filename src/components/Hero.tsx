@@ -70,22 +70,16 @@ const Hero = () => {
           </div>
 
           {/* Mobile Google Rating */}
-          <div className="md:hidden flex items-center justify-center space-x-4 mb-8">
-            <div className="flex items-center space-x-2">
-              <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-red-500 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-xs">G</span>
-              </div>
-              <span className="font-semibold text-gray-300 text-sm">Google</span>
+          <div className="md:hidden flex items-center justify-center space-x-3 mb-8">
+            <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-red-500 rounded-full flex items-center justify-center">
+              <span className="text-white font-bold text-xs">G</span>
             </div>
-            <div className="flex items-center space-x-2">
-              <div className="flex items-center">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                ))}
-                <span className="ml-2 text-lg font-bold text-white">4.8</span>
-              </div>
+            <span className="text-lg font-bold text-white">4.8</span>
+            <div className="flex items-center">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+              ))}
             </div>
-            <span className="text-gray-300 text-sm">55+ reviews</span>
           </div>
 
           {/* Stats */}
