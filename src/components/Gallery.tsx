@@ -18,35 +18,35 @@ const Gallery = () => {
 
   const galleryItems = [
     {
-      image: 'https://images.pexels.com/photos/3354648/pexels-photo-3354648.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+      image: '/images/interior_cleaning_audi-tiruy55r.png',
       label: 'Exterior Detailing'
     },
     {
-      image: 'https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+      image: '/images/interior_cleaning_audi-2.png',
       label: 'Interior Restoration'
     },
     {
-      image: 'https://images.pexels.com/photos/3354648/pexels-photo-3354648.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+      image: '/images/interior_cleaning_audi_q8-by5jxqk1.png',
       label: 'Wheel Care'
     },
     {
-      image: 'https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+      image: '/images/interior_cleaning_audi_lamborghini-1snl2-jc.png',
       label: 'Glass Treatment'
     },
     {
-      image: 'https://images.pexels.com/photos/3354648/pexels-photo-3354648.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+      image: '/images/interior_cleaning_audi-3.png',
       label: 'Engine Bay'
     },
     {
-      image: 'https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+      image: '/images/11-cz_a1h-z.png',
       label: 'Mobile Service'
     },
     {
-      image: 'https://images.pexels.com/photos/3354648/pexels-photo-3354648.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+      image: '/images/interior_cleaning_audi-tiruy55r.png',
       label: 'SUV Detailing'
     },
     {
-      image: 'https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+      image: '/images/interior_cleaning_audi_q8-by5jxqk1.png',
       label: 'Executive Care'
     }
   ];
