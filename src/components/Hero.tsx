@@ -39,11 +39,13 @@ const Hero = () => {
 
           {/* Title */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            Professional Car Care
-            <br />
-            delivered{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-              wherever you are
+            <span className="block sm:inline">Professional</span>{' '}
+            <span className="block sm:inline">Car Care</span>
+            <br className="hidden sm:block" />
+            <span className="block sm:inline">delivered</span>{' '}
+            <span className="block sm:inline">wherever</span>{' '}
+            <span className="block sm:inline text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+              you are
             </span>
           </h1>
 
