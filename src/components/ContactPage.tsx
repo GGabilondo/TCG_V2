@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Phone, MessageCircle, Mail, MapPin, Clock, CheckCircle, ArrowRight, Star } from 'lucide-react';
-import emailjs from '@emailjs/browser';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -15,10 +14,43 @@ const ContactPage = () => {
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    // Let Netlify handle the form submission
-    // Don't prevent default - let the form submit naturally
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const form = e.target as HTMLFormElement;
+      const formData = new FormData(form);
+      
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as any).toString()
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          service: '',
+          location: '',
+          date: '',
+          time: '',
+          message: ''
+        });
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('There was an error submitting your booking. Please try again or contact us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -148,16 +180,28 @@ const ContactPage = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">Booking Received!</h3>
                   <p className="text-gray-300">Thank you for choosing TCG CarCare. We'll contact you within 2 hours to confirm your appointment.</p>
+                  <button
+                    onClick={() => setIsSubmitted(false)}
+                    className="mt-4 text-blue-400 hover:text-blue-300 underline"
+                  >
+                    Submit Another Booking
+                  </button>
                 </div>
               ) : (
                 <form 
-                  name="contact-form"
+                  name="detailed-booking"
                   method="POST"
-                  netlify
-                  netlify-honeypot="bot-field"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
                   onSubmit={handleSubmit} 
                   className="space-y-6"
                 >
+                  <input type="hidden" name="form-name" value="detailed-booking" />
+                  <p className="hidden">
+                    <label>
+                      Don't fill this out if you're human: <input name="bot-field" />
+                    </label>
+                  </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <input
                       type="text"
@@ -253,10 +297,11 @@ const ContactPage = () => {
 
                   <button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2 group shadow-lg shadow-blue-500/30 btn-glow hover:shadow-xl hover:shadow-blue-500/50 transform hover:scale-105"
+                    disabled={isSubmitting}
+                    className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2 group shadow-lg shadow-blue-500/30 btn-glow hover:shadow-xl hover:shadow-blue-500/50 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                   >
-                    <span>Submit Booking Request</span>
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    <span>{isSubmitting ? 'Submitting...' : 'Submit Detailed Booking'}</span>
+                    {!isSubmitting && <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />}
                   </button>
                 </form>
               )}

@@ -10,10 +10,6 @@ const Footer = () => {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    // Let Netlify handle the form submission
-    // Don't prevent default - let the form submit naturally
-  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -106,13 +102,18 @@ const Footer = () => {
           <div className="bg-gray-900 rounded-lg p-6 border border-gray-800">
             <h3 className="text-2xl font-bold mb-6">Book Your Service</h3>
             <form 
-              name="footer-contact"
+              name="footer-booking"
               method="POST"
-              netlify
-              netlify-honeypot="bot-field"
-              onSubmit={handleSubmit} 
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
               className="space-y-4"
             >
+              <input type="hidden" name="form-name" value="footer-booking" />
+              <p className="hidden">
+                <label>
+                  Don't fill this out if you're human: <input name="bot-field" />
+                </label>
+              </p>
               <input
                 type="text"
                 name="name"
@@ -165,7 +166,7 @@ const Footer = () => {
                 type="submit"
                 className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2 group shadow-lg shadow-blue-500/30 btn-glow hover:shadow-xl hover:shadow-blue-500/50"
               >
-                <span>Quick Book</span>
+                <span>Send Quick Booking</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
             </form>
