@@ -26,7 +26,6 @@ const Hero = () => {
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/80 to-red-900/40"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-black/30 via-black/20 to-black/25"></div>
       </div>
 
       {/* Content */}
