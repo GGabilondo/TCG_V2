@@ -46,7 +46,7 @@ const Gallery = () => {
       label: 'Engine Bay'
     },
     {
-      image: '/images/11-cz_a1h-z.png',
+      image: '/images/Movile_service.jpg',
       label: 'Mobile Service'
     },
     {
