@@ -55,7 +55,7 @@ const Header = () => {
             <img 
               src="/images/TCG_Logo.png" 
               alt="TCG CarCare Logo" 
-              className="h-12 lg:h-16 w-auto object-contain"
+              className="h-16 lg:h-20 w-auto object-contain"
             />
           </div>
 
