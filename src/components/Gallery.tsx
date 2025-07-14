@@ -34,8 +34,8 @@ const Gallery = () => {
       label: 'Interior Restoration'
     },
     {
-      image: '/images/interior_cleaning_audi_q8-by5jxqk1.png',
-      label: 'Interior Detailing'
+      image: '/images/Wheel_care.jpg',
+      label: 'Wheel Care'
     },
     {
       image: '/images/interior_cleaning_audi_lamborghini-1snl2-jc.png',
