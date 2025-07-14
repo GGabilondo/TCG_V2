@@ -30,7 +30,7 @@ const Gallery = () => {
       label: 'Exterior Detailing'
     },
     {
-      image: '/images/interior_cleaning_audi-2.png',
+      image: '/images/Interior_restoration.jpg',
       label: 'Interior Restoration'
     },
     {
