@@ -25,6 +25,7 @@ const Hero = () => {
           alt="Luxury car detailing" 
           className="w-full h-full object-cover"
         />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40"></div>
       </div>
 
       {/* Content */}
