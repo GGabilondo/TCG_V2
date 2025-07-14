@@ -54,7 +54,7 @@ const Gallery = () => {
       label: 'SUV Detailing'
     },
     {
-      image: '/images/interior_cleaning_audi_q8-by5jxqk1.png',
+      image: '/images/Executive_care.jpg',
       label: 'Executive Care'
     }
   ];
