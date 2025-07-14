@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Phone, MessageCircle, Mail, MapPin, Clock, CheckCircle, ArrowRight, Star } from 'lucide-react';
+import { sendContactForm, ContactFormData } from '../utils/emailService';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -15,22 +16,17 @@ const ContactPage = () => {
 
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitError('');
 
     try {
-      const form = e.target as HTMLFormElement;
-      const formData = new FormData(form);
+      const success = await sendContactForm(formData as ContactFormData);
       
-      const response = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData as any).toString()
-      });
-
-      if (response.ok) {
+      if (success) {
         setIsSubmitted(true);
         setFormData({
           name: '',
@@ -42,12 +38,16 @@ const ContactPage = () => {
           time: '',
           message: ''
         });
+        
+        // Reset success message after 10 seconds
+        setTimeout(() => {
+          setIsSubmitted(false);
+        }, 10000);
       } else {
-        throw new Error('Form submission failed');
+        setSubmitError('Failed to send booking request. Please try again or contact us directly.');
       }
     } catch (error) {
-      console.error('Error submitting form:', error);
-      alert('There was an error submitting your booking. Please try again or contact us directly.');
+      setSubmitError('Failed to send booking request. Please try again or contact us directly.');
     } finally {
       setIsSubmitting(false);
     }
@@ -179,29 +179,17 @@ const ContactPage = () => {
                     <CheckCircle className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">Booking Received!</h3>
-                  <p className="text-gray-300">Thank you for choosing TCG CarCare. We'll contact you within 2 hours to confirm your appointment.</p>
-                  <button
-                    onClick={() => setIsSubmitted(false)}
-                    className="mt-4 text-blue-400 hover:text-blue-300 underline"
-                  >
-                    Submit Another Booking
-                  </button>
+                  <p className="text-gray-300 mb-4">Thank you for choosing TCG CarCare. We'll contact you within 2 hours to confirm your appointment.</p>
+                  <p className="text-sm text-gray-400">Emails sent to both info@tcgcarcare.co.uk and hola@remedio.studio</p>
                 </div>
               ) : (
-                <form 
-                  name="detailed-booking"
-                  method="POST"
-                  data-netlify="true"
-                  data-netlify-honeypot="bot-field"
-                  onSubmit={handleSubmit} 
-                  className="space-y-6"
-                >
-                  <input type="hidden" name="form-name" value="detailed-booking" />
-                  <p className="hidden">
-                    <label>
-                      Don't fill this out if you're human: <input name="bot-field" />
-                    </label>
-                  </p>
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  {submitError && (
+                    <div className="bg-red-500/20 border border-red-400/50 rounded-lg p-3 text-red-400 text-sm">
+                      {submitError}
+                    </div>
+                  )}
+                  
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <input
                       type="text"
@@ -210,6 +198,7 @@ const ContactPage = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
+                      disabled={isSubmitting}
                       className="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 hover:border-blue-400/50"
                     />
                     <input
@@ -219,6 +208,7 @@ const ContactPage = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
+                      disabled={isSubmitting}
                       className="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 hover:border-blue-400/50"
                     />
                   </div>
@@ -231,6 +221,7 @@ const ContactPage = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       required
+                      disabled={isSubmitting}
                       className="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 hover:border-blue-400/50"
                     />
                     <select
@@ -238,6 +229,7 @@ const ContactPage = () => {
                       value={formData.service}
                       onChange={handleChange}
                       required
+                      disabled={isSubmitting}
                       className="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 hover:border-blue-400/50"
                     >
                       <option value="">Select Service *</option>
@@ -253,6 +245,7 @@ const ContactPage = () => {
                     value={formData.location}
                     onChange={handleChange}
                     required
+                    disabled={isSubmitting}
                     className="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 hover:border-blue-400/50"
                   >
                     <option value="">Select Area *</option>
@@ -270,6 +263,7 @@ const ContactPage = () => {
                       onChange={handleChange}
                       min={new Date().toISOString().split('T')[0]}
                       required
+                      disabled={isSubmitting}
                       className="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 hover:border-blue-400/50 [&::-webkit-calendar-picker-indicator]:filter [&::-webkit-calendar-picker-indicator]:invert [&::-webkit-calendar-picker-indicator]:cursor-pointer"
                     />
                     <select
@@ -277,6 +271,7 @@ const ContactPage = () => {
                       value={formData.time}
                       onChange={handleChange}
                       required
+                      disabled={isSubmitting}
                       className="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 hover:border-blue-400/50"
                     >
                       <option value="">Preferred Time *</option>
@@ -292,6 +287,7 @@ const ContactPage = () => {
                     value={formData.message}
                     onChange={handleChange}
                     rows={4}
+                    disabled={isSubmitting}
                     className="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 resize-none hover:border-blue-400/50"
                   />
 
@@ -300,7 +296,7 @@ const ContactPage = () => {
                     disabled={isSubmitting}
                     className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2 group shadow-lg shadow-blue-500/30 btn-glow hover:shadow-xl hover:shadow-blue-500/50 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                   >
-                    <span>{isSubmitting ? 'Submitting...' : 'Submit Detailed Booking'}</span>
+                    <span>{isSubmitting ? 'Sending...' : 'Submit Detailed Booking'}</span>
                     {!isSubmitting && <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />}
                   </button>
                 </form>

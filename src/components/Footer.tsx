@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Phone, MessageCircle, Mail, MapPin, Instagram, Linkedin, ArrowRight } from 'lucide-react';
+import { sendFooterForm, FooterFormData } from '../utils/emailService';
 
 const Footer = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +10,9 @@ const Footer = () => {
     service: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -18,6 +22,37 @@ const Footer = () => {
     });
   };
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitError('');
+
+    try {
+      const success = await sendFooterForm(formData as FooterFormData);
+      
+      if (success) {
+        setIsSubmitted(true);
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          service: '',
+          message: ''
+        });
+        
+        // Reset success message after 5 seconds
+        setTimeout(() => {
+          setIsSubmitted(false);
+        }, 5000);
+      } else {
+        setSubmitError('Failed to send message. Please try again or contact us directly.');
+      }
+    } catch (error) {
+      setSubmitError('Failed to send message. Please try again or contact us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   return (
     <footer id="contact" className="bg-black text-white border-t border-blue-500/20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -101,19 +136,23 @@ const Footer = () => {
           {/* Contact Form */}
           <div className="bg-gray-900 rounded-lg p-6 border border-gray-800">
             <h3 className="text-2xl font-bold mb-6">Book Your Service</h3>
-            <form 
-              name="footer-booking"
-              method="POST"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
-              className="space-y-4"
-            >
-              <input type="hidden" name="form-name" value="footer-booking" />
-              <p className="hidden">
-                <label>
-                  Don't fill this out if you're human: <input name="bot-field" />
-                </label>
-              </p>
+            
+            {isSubmitted ? (
+              <div className="text-center py-8">
+                <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <ArrowRight className="w-8 h-8 text-white transform rotate-45" />
+                </div>
+                <h4 className="text-xl font-bold text-white mb-2">Message Sent!</h4>
+                <p className="text-gray-300">Thank you for contacting TCG CarCare. We'll respond within 2 hours.</p>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-4">
+                {submitError && (
+                  <div className="bg-red-500/20 border border-red-400/50 rounded-lg p-3 text-red-400 text-sm">
+                    {submitError}
+                  </div>
+                )}
+                
               <input
                 type="text"
                 name="name"
@@ -121,6 +160,7 @@ const Footer = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
+                disabled={isSubmitting}
                 className="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
               />
               <input
@@ -130,6 +170,7 @@ const Footer = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
+                disabled={isSubmitting}
                 className="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
               />
               <input
@@ -139,6 +180,7 @@ const Footer = () => {
                 value={formData.phone}
                 onChange={handleChange}
                 required
+                disabled={isSubmitting}
                 className="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
               />
               <select
@@ -146,6 +188,7 @@ const Footer = () => {
                 value={formData.service}
                 onChange={handleChange}
                 required
+                disabled={isSubmitting}
                 className="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
               >
                 <option value="">Select Service</option>
@@ -160,16 +203,19 @@ const Footer = () => {
                 value={formData.message}
                 onChange={handleChange}
                 rows={4}
+                disabled={isSubmitting}
                 className="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none"
               />
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2 group shadow-lg shadow-blue-500/30 btn-glow hover:shadow-xl hover:shadow-blue-500/50"
+                disabled={isSubmitting}
+                className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2 group shadow-lg shadow-blue-500/30 btn-glow hover:shadow-xl hover:shadow-blue-500/50 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                <span>Send Quick Booking</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <span>{isSubmitting ? 'Sending...' : 'Send Quick Booking'}</span>
+                {!isSubmitting && <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />}
               </button>
             </form>
+            )}
           </div>
         </div>
 
