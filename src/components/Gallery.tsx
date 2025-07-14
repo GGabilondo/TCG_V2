@@ -42,7 +42,7 @@ const Gallery = () => {
       label: 'Glass Treatment'
     },
     {
-      image: '/images/interior_cleaning_audi-3.png',
+      image: '/images/Engine_bay.jpg',
       label: 'Engine Bay'
     },
     {
