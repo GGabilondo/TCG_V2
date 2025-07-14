@@ -52,15 +52,11 @@ const Header = () => {
             className="flex items-center space-x-3 cursor-pointer" 
             onClick={() => navigate('/')}
           >
-            <div className="relative w-12 h-12 lg:w-14 lg:h-14">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center shadow-lg shadow-blue-500/30">
-                <span className="text-white font-bold text-lg lg:text-xl">TCG</span>
-              </div>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-xl lg:text-2xl font-bold text-white">TCG</span>
-              <span className="text-sm lg:text-base text-blue-400 font-medium">CarCare</span>
-            </div>
+            <img 
+              src="/images/TCG_Logo.png" 
+              alt="TCG CarCare Logo" 
+              className="h-12 lg:h-16 w-auto object-contain"
+            />
           </div>
 
           {/* Desktop Navigation */}
