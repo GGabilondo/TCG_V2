@@ -38,38 +38,38 @@ const Hero = () => {
           </div>
 
           {/* Title */}
-          <h1 className="font-bold text-white mb-6 leading-tight">
-            <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl">Professional</span>
-            <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl">Car Care delivered</span>
-            <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+          <h1 className="font-bold text-white mb-4 leading-tight">
+            <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">Professional</span>
+            <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">Car Care delivered</span>
+            <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
               wherever you are
             </span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl lg:text-2xl text-gray-200 mb-6 max-w-2xl mx-auto leading-relaxed">
             With over 8 years of experience, countless 5-star reviews and the leading car care service in Glasgow.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
             <button 
               onClick={scrollToContact}
-              className="group bg-gradient-to-r from-blue-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 flex items-center space-x-2 shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 transform hover:scale-105 btn-glow"
+              className="group bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 flex items-center space-x-2 shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 transform hover:scale-105 btn-glow"
             >
               <span>Book Now</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             <button 
               onClick={scrollToServices}
-              className="hidden md:group md:bg-white/10 md:backdrop-blur-sm md:text-white md:px-8 md:py-4 md:rounded-full md:font-semibold md:hover:bg-blue-500/20 md:transition-all md:duration-300 md:border md:border-white/20 md:hover:border-blue-400/40 md:btn-glow md:hover:shadow-lg md:hover:shadow-blue-500/30 md:flex md:items-center"
+              className="hidden md:group md:bg-white/10 md:backdrop-blur-sm md:text-white md:px-6 md:py-3 md:rounded-full md:font-semibold md:hover:bg-blue-500/20 md:transition-all md:duration-300 md:border md:border-white/20 md:hover:border-blue-400/40 md:btn-glow md:hover:shadow-lg md:hover:shadow-blue-500/30 md:flex md:items-center"
             >
               View Services
             </button>
           </div>
 
           {/* Mobile Google Rating */}
-          <div className="md:hidden flex flex-col items-center justify-center mb-8 space-y-2">
+          <div className="md:hidden flex flex-col items-center justify-center mb-6 space-y-2">
             <div className="flex items-center space-x-3">
               <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg">
                 <span className="font-bold text-lg bg-gradient-to-r from-blue-500 via-red-500 via-yellow-500 to-green-500 bg-clip-text text-transparent">G</span>
@@ -84,27 +84,27 @@ const Hero = () => {
           </div>
 
           {/* Stats */}
-          <div className="hidden md:flex md:justify-center md:items-center md:space-x-12 md:max-w-4xl md:mx-auto">
+          <div className="hidden lg:flex lg:justify-center lg:items-center lg:space-x-8 xl:space-x-12 lg:max-w-4xl lg:mx-auto">
             <div className="text-center">
               <div className="flex items-center justify-center mb-2">
                 <Clock className="w-6 h-6 text-blue-400 mr-2" />
-                <span className="text-3xl font-bold text-white">8+</span>
+                <span className="text-2xl lg:text-3xl font-bold text-white">8+</span>
               </div>
-              <p className="text-gray-200">Years Experience</p>
+              <p className="text-sm lg:text-base text-gray-200">Years Experience</p>
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center mb-2">
                 <Users className="w-6 h-6 text-blue-400 mr-2" />
-                <span className="text-3xl font-bold text-white">500+</span>
+                <span className="text-2xl lg:text-3xl font-bold text-white">500+</span>
               </div>
-              <p className="text-gray-200">Happy Clients</p>
+              <p className="text-sm lg:text-base text-gray-200">Happy Clients</p>
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center mb-2">
                 <Star className="w-6 h-6 text-blue-400 mr-2" />
-                <span className="text-3xl font-bold text-white">4.8★</span>
+                <span className="text-2xl lg:text-3xl font-bold text-white">4.8★</span>
               </div>
-              <p className="text-gray-200">Google Rating</p>
+              <p className="text-sm lg:text-base text-gray-200">Google Rating</p>
             </div>
           </div>
         </div>
