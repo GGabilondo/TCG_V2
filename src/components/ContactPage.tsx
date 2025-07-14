@@ -112,11 +112,10 @@ const ContactPage = () => {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.pexels.com/photos/3354648/pexels-photo-3354648.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" 
+            src="/images/Hero_1.jpg" 
             alt="Contact TCG CarCare" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/80 to-blue-900/40"></div>
         </div>
 
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
