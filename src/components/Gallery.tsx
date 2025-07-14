@@ -50,7 +50,7 @@ const Gallery = () => {
       label: 'Mobile Service'
     },
     {
-      image: '/images/interior_cleaning_audi-tiruy55r.png',
+      image: '/images/SUV_detailing.jpg',
       label: 'SUV Detailing'
     },
     {
