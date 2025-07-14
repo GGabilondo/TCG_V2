@@ -22,7 +22,7 @@ const Gallery = () => {
       label: 'Premium Detailing'
     },
     {
-      image: '/images/IMG_2071.PNG',
+      image: '/images/Profesional_results.jpg',
       label: 'Professional Results'
     },
     {
