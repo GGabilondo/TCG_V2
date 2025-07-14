@@ -26,7 +26,7 @@ const Gallery = () => {
       label: 'Professional Results'
     },
     {
-      image: '/images/interior_cleaning_audi-tiruy55r.png',
+      image: '/images/Exterior_detailing.jpg',
       label: 'Exterior Detailing'
     },
     {
