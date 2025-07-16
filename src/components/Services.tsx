@@ -13,7 +13,7 @@ const Services = () => {
     {
       name: 'TCG REFRESH',
       price: 'From £90',
-      image: '/images/interior_cleaning_audi-tiruy55r.png',
+      image: '/images/TCG_refresh.png',
       exteriorFeatures: [
         'Wheels, tyres & wheel wells detailed',
         'Safe two-bucket wash',
