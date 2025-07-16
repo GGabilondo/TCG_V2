@@ -12,6 +12,26 @@
     overflow-x: hidden;
   }
   
+  /* Laptop scaling for 15.6-19 inch screens to prevent overlapping */
+  @media screen and (min-width: 1024px) and (max-width: 1920px) and (min-height: 600px) and (max-height: 1080px) {
+    body {
+      transform: scale(0.9);
+      transform-origin: top left;
+      width: 111.11%;
+      height: 111.11%;
+    }
+  }
+
+  /* Laptop scaling to prevent overlapping */
+  @media screen and (min-width: 1366px) and (max-width: 1600px) and (min-height: 768px) and (max-height: 1000px) {
+    body {
+      transform: scale(0.9);
+      transform-origin: top left;
+      width: 111.11%;
+      height: 111.11%;
+    }
+  }
+  
   * {
     box-sizing: border-box;
   }
