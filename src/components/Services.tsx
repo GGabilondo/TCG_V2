@@ -29,7 +29,7 @@ const Services = () => {
         'Steering wheel cleaned'
       ],
       duration: '2.5 - 4 Hours',
-      description: 'A full interior and exterior refresh without the advanced restoration elements. Ideal for well-kept vehicles or as a seasonal refresh.',
+      description: 'Ideal for well-kept vehicles or as a seasonal refresh.',
       popular: false
     },
     {
