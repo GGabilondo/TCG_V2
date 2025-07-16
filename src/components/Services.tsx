@@ -153,19 +153,19 @@ const Services = () => {
                           <Check className="w-4 h-4 mr-2" />
                           Exterior
                         </h4>
-                        <p className="text-gray-300 text-sm leading-relaxed ml-6 -mt-1">Wheels & tyres detailed, safe two-bucket wash</p>
+                        <p className="text-gray-300 text-sm leading-relaxed ml-6 -mt-1">Engine bay, wheels & tyres detailed, safe two-bucket wash</p>
                       </div>
                       
                       <div>
-                        <h4 className="text-blue-400 font-semibold text-sm mb-2 uppercase tracking-wide flex items-center">
+                        <h4 className="text-blue-400 font-semibold text-sm mb-3 uppercase tracking-wide flex items-center">
                           <Check className="w-4 h-4 mr-2" />
-                          Paint
+                          Protection
                         </h4>
-                        <p className="text-gray-300 text-sm leading-relaxed ml-6 -mt-1">Decontamination chemical & clay bar, 1-year ceramic coating</p>
+                        <p className="text-gray-300 text-sm leading-relaxed ml-6 -mt-1">3-month paint protection, exhausts polished</p>
                       </div>
                       
                       <div>
-                        <h4 className="text-blue-400 font-semibold text-sm mb-2 uppercase tracking-wide flex items-center">
+                        <h4 className="text-blue-400 font-semibold text-sm mb-3 uppercase tracking-wide flex items-center">
                           <Check className="w-4 h-4 mr-2" />
                           Interior
                         </h4>
@@ -173,7 +173,7 @@ const Services = () => {
                       </div>
                       
                       <div>
-                        <h4 className="text-blue-400 font-semibold text-sm mb-2 uppercase tracking-wide flex items-center">
+                        <h4 className="text-blue-400 font-semibold text-sm mb-3 uppercase tracking-wide flex items-center">
                           <Check className="w-4 h-4 mr-2" />
                           Details
                         </h4>
@@ -182,7 +182,7 @@ const Services = () => {
                     </div>
                     
                     {/* Duration & Price Highlight */}
-                    <div className="bg-blue-500/10 border border-blue-400/30 rounded-lg p-3 mb-4 mt-6">
+                    <div className="bg-blue-500/10 border border-blue-400/30 rounded-lg p-3 mb-4 mt-8">
                       <div className="flex justify-between items-center">
                         <div className="text-center flex-1">
                           <div className="text-blue-400 text-xs font-medium uppercase tracking-wide">Duration</div>
@@ -237,30 +237,39 @@ const Services = () => {
                       </div>
                     ) : (
                       <>
-                        {/* Exterior Features for TCG REFRESH */}
-                        <div className="mb-4">
-                          <h4 className="text-blue-400 font-semibold text-sm mb-2 uppercase tracking-wide">Exterior</h4>
-                          <ul className="space-y-1">
-                            {service.exteriorFeatures?.map((feature, featureIndex) => (
-                              <li key={featureIndex} className="flex items-center text-xs text-gray-300">
-                                <Check className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0" />
-                                {feature}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                        
-                        {/* Interior Features for TCG REFRESH */}
-                        <div className="mb-4">
-                          <h4 className="text-blue-400 font-semibold text-sm mb-2 uppercase tracking-wide">Interior</h4>
-                          <ul className="space-y-1">
-                            {service.interiorFeatures?.map((feature, featureIndex) => (
-                              <li key={featureIndex} className="flex items-center text-xs text-gray-300">
-                                <Check className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0" />
-                                {feature}
-                              </li>
-                            ))}
-                          </ul>
+                        {/* Features for TCG REFRESH */}
+                        <div className="space-y-4">
+                          <div>
+                            <h4 className="text-blue-400 font-semibold text-sm mb-3 uppercase tracking-wide flex items-center">
+                              <Check className="w-4 h-4 mr-2" />
+                              Exterior
+                            </h4>
+                            <p className="text-gray-300 text-sm leading-relaxed ml-6 -mt-1">Wheels & tyres detailed, safe two-bucket wash</p>
+                          </div>
+                          
+                          <div>
+                            <h4 className="text-blue-400 font-semibold text-sm mb-3 uppercase tracking-wide flex items-center">
+                              <Check className="w-4 h-4 mr-2" />
+                              Windows
+                            </h4>
+                            <p className="text-gray-300 text-sm leading-relaxed ml-6 -mt-1">Exterior windows cleaned</p>
+                          </div>
+                          
+                          <div>
+                            <h4 className="text-blue-400 font-semibold text-sm mb-3 uppercase tracking-wide flex items-center">
+                              <Check className="w-4 h-4 mr-2" />
+                              Interior
+                            </h4>
+                            <p className="text-gray-300 text-sm leading-relaxed ml-6 -mt-1">Boot, carpets & mats hoovered, leather seats wiped/cleaned</p>
+                          </div>
+                          
+                          <div>
+                            <h4 className="text-blue-400 font-semibold text-sm mb-3 uppercase tracking-wide flex items-center">
+                              <Check className="w-4 h-4 mr-2" />
+                              Details
+                            </h4>
+                            <p className="text-gray-300 text-sm leading-relaxed ml-6 -mt-1">Door, boot & bonnet shuts cleaned</p>
+                          </div>
                         </div>
                       </>
                     )}
