@@ -35,7 +35,7 @@ const Services = () => {
     {
       name: 'TCG DEEP CLEAN',
       price: 'From £150',
-      image: '/images/interior_cleaning_audi-tiruy55r.png',
+      image: '/images/optimizada.png',
       exteriorFeatures: [
         'Engine bay cleaned',
         'Wheels, tyres & wheel wells detailed',
