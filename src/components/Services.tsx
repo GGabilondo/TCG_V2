@@ -153,7 +153,7 @@ const Services = () => {
                           <Check className="w-4 h-4 mr-2" />
                           Exterior
                         </h4>
-                        <p className="text-gray-300 text-xs">Wheels & tyres detailed, safe two-bucket wash</p>
+                        <p className="text-gray-300 text-sm leading-relaxed ml-6 -mt-1">Wheels & tyres detailed, safe two-bucket wash</p>
                       </div>
                       
                       <div>
@@ -161,7 +161,7 @@ const Services = () => {
                           <Check className="w-4 h-4 mr-2" />
                           Paint
                         </h4>
-                        <p className="text-gray-300 text-xs">Decontamination chemical & clay bar, 1-year ceramic coating</p>
+                        <p className="text-gray-300 text-sm leading-relaxed ml-6 -mt-1">Decontamination chemical & clay bar, 1-year ceramic coating</p>
                       </div>
                       
                       <div>
@@ -169,7 +169,7 @@ const Services = () => {
                           <Check className="w-4 h-4 mr-2" />
                           Interior
                         </h4>
-                        <p className="text-gray-300 text-xs">Steam cleaning for carpets, mats & leather seats</p>
+                        <p className="text-gray-300 text-sm leading-relaxed ml-6 -mt-1">Steam cleaning for carpets, mats & leather seats</p>
                       </div>
                       
                       <div>
@@ -177,11 +177,7 @@ const Services = () => {
                           <Check className="w-4 h-4 mr-2" />
                           Details
                         </h4>
-                        <p className="text-gray-300 text-xs">Air vents, console, dashboard & steering wheel deep cleaned</p>
-                      </div>
-                      
-                      <div className="bg-blue-500/10 border border-blue-400/30 rounded-lg p-3 mt-4">
-                        <p className="text-blue-400 text-sm font-semibold text-center">ADD ONS AVAILABLE</p>
+                        <p className="text-gray-300 text-sm leading-relaxed ml-6 -mt-1">Air vents, console, dashboard & steering wheel deep cleaned</p>
                       </div>
                     </div>
                     
