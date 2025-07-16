@@ -109,7 +109,7 @@ const Services = () => {
             Premium Car Care Solutions
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Professional mobile car care that comes to you, delivering exceptional results every time.
+            Professional mobile car care that comes to you.
           </p>
         </div>
 
