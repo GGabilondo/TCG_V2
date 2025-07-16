@@ -55,21 +55,21 @@ const Testimonials = () => {
           
           {/* Google Rating */}
           <div className="flex items-center justify-center space-x-4 mb-8">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-red-500 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-sm">G</span>
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg">
+                <span className="font-bold text-xl bg-gradient-to-r from-blue-500 via-red-500 via-yellow-500 to-green-500 bg-clip-text text-transparent">G</span>
               </div>
-              <span className="font-semibold text-gray-300">Google</span>
+              <span className="text-lg font-semibold text-white">Google Reviews</span>
             </div>
-            <div className="flex items-center space-x-2">
-              <div className="flex items-center">
+            <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-1">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                 ))}
-                <span className="ml-2 text-lg font-bold text-white">5.0</span>
               </div>
+              <span className="text-2xl font-bold text-white">5.0</span>
             </div>
-            <span className="text-gray-300">11+ positive reviews</span>
+            <span className="text-gray-300 font-medium">Based on 11+ reviews</span>
           </div>
         </div>
 
