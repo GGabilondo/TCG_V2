@@ -106,7 +106,9 @@ const Footer = () => {
             {/* Social Links */}
             <div className="flex space-x-4 pt-6">
               <a 
-                href="#" 
+                href="https://www.instagram.com/tcgcarcare/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-500 transition-colors border border-gray-700 hover:border-blue-400"
               >
                 <Instagram className="w-5 h-5" />

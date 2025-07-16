@@ -90,7 +90,9 @@ const Header = () => {
           {/* WhatsApp & Mobile Menu */}
           <div className="flex items-center space-x-4">
             <a 
-              href="https://wa.me/447398251847"
+              href="https://www.instagram.com/tcgcarcare/" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="hidden sm:flex items-center space-x-2 text-green-400 hover:text-green-300 transition-all duration-300 px-3 py-2 rounded-lg border border-green-400/30 hover:border-green-400/50 hover:bg-green-400/10 backdrop-blur-sm"
             >
               <MessageCircle size={20} />
