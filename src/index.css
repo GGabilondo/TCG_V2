@@ -2,13 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Laptop-specific scaling - Updated range for 15.6" laptops */
-@media (min-width: 768px) and (max-width: 1366px) {
+/* Laptop-specific scaling for 15.6" laptops */
+@media (min-width: 1024px) and (max-width: 1366px) and (min-height: 600px) {
   body {
     transform: scale(0.75);
-    transform-origin: top center;
-    width: 133.33%; /* Compensate for scaling */
-    margin: 0 auto;
+    transform-origin: top left;
+    width: 133.33%;
+    height: 133.33%;
+    overflow-x: hidden;
+  }
+  
+  html {
+    overflow-x: hidden;
+  }
+  
+  #root {
+    width: 100vw;
+    overflow-x: hidden;
   }
 }
 
