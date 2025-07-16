@@ -2,29 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Laptop-specific scaling for 15.6" laptops */
-@media (min-width: 1024px) and (max-width: 1366px) and (min-height: 600px) {
-  body {
-    transform: scale(0.75);
-    transform-origin: top left;
-    width: 133.33%;
-    height: 133.33%;
-    overflow-x: hidden;
-  }
-  
-  html {
-    overflow-x: hidden;
-  }
-  
-  #root {
-    width: 100vw;
-    overflow-x: hidden;
-  }
-}
-
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+  
+  * {
+    box-sizing: border-box;
   }
 }
 

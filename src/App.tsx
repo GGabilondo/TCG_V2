@@ -12,7 +12,7 @@ import ContactPage from './components/ContactPage';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-black">
+      <div className="min-h-screen bg-black overflow-x-hidden">
         <Header />
         <Routes>
           <Route path="/" element={
