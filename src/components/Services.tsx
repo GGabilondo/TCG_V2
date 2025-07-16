@@ -208,35 +208,35 @@ const Services = () => {
                     {service.name === 'TCG DEEP CLEAN' ? (
                       <div className="space-y-4">
                         <div>
-                          <h4 className="text-blue-400 font-semibold text-sm mb-2 uppercase tracking-wide flex items-center">
+                          <h4 className="text-blue-400 font-semibold text-sm mb-3 uppercase tracking-wide flex items-center">
                             <Check className="w-4 h-4 mr-2" />
                             Exterior
                           </h4>
-                          <p className="text-gray-300 text-xs">Engine bay, wheels & tyres detailed, safe two-bucket wash</p>
+                          <p className="text-gray-300 text-sm leading-relaxed ml-6">Wheels & tyres detailed, safe two-bucket wash</p>
                         </div>
                         
                         <div>
-                          <h4 className="text-blue-400 font-semibold text-sm mb-2 uppercase tracking-wide flex items-center">
+                          <h4 className="text-blue-400 font-semibold text-sm mb-3 uppercase tracking-wide flex items-center">
                             <Check className="w-4 h-4 mr-2" />
                             Protection
                           </h4>
-                          <p className="text-gray-300 text-xs">3-month paint protection, exhausts polished</p>
+                          <p className="text-gray-300 text-sm leading-relaxed ml-6">Decontamination chemical & clay bar, 1-year ceramic coating</p>
                         </div>
                         
                         <div>
-                          <h4 className="text-blue-400 font-semibold text-sm mb-2 uppercase tracking-wide flex items-center">
+                          <h4 className="text-blue-400 font-semibold text-sm mb-3 uppercase tracking-wide flex items-center">
                             <Check className="w-4 h-4 mr-2" />
                             Interior
                           </h4>
-                          <p className="text-gray-300 text-xs">Steam cleaning for carpets, mats & leather seats</p>
+                          <p className="text-gray-300 text-sm leading-relaxed ml-6">Steam cleaning for carpets, mats & leather seats</p>
                         </div>
                         
                         <div>
-                          <h4 className="text-blue-400 font-semibold text-sm mb-2 uppercase tracking-wide flex items-center">
+                          <h4 className="text-blue-400 font-semibold text-sm mb-3 uppercase tracking-wide flex items-center">
                             <Check className="w-4 h-4 mr-2" />
                             Details
                           </h4>
-                          <p className="text-gray-300 text-xs">Air vents, console, dashboard & steering wheel deep cleaned</p>
+                          <p className="text-gray-300 text-sm leading-relaxed ml-6">Air vents, console, dashboard & steering wheel deep cleaned</p>
                         </div>
                       </div>
                     ) : (
