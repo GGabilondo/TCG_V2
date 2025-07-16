@@ -48,7 +48,7 @@ const Hero = () => {
 
           {/* Subtitle */}
           <p className="text-lg md:text-xl lg:text-2xl text-gray-200 mb-6 max-w-2xl mx-auto leading-relaxed">
-            With over 8 years of experience, countless 5-star reviews and the leading car care service in Glasgow.
+            With over 4 years of experience, countless 5-star reviews and the leading car care service in Glasgow.
           </p>
 
           {/* CTA Buttons */}
@@ -74,7 +74,7 @@ const Hero = () => {
               <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg">
                 <span className="font-bold text-lg bg-gradient-to-r from-blue-500 via-red-500 via-yellow-500 to-green-500 bg-clip-text text-transparent">G</span>
               </div>
-              <span className="text-3xl font-bold text-white">4.8</span>
+              <span className="text-3xl font-bold text-white">5.0</span>
             </div>
             <div className="flex items-center space-x-1">
               {[...Array(5)].map((_, i) => (
@@ -88,21 +88,21 @@ const Hero = () => {
             <div className="text-center">
               <div className="flex items-center justify-center mb-2">
                 <Clock className="w-6 h-6 text-blue-400 mr-2" />
-                <span className="text-2xl lg:text-3xl font-bold text-white">8+</span>
+                <span className="text-2xl lg:text-3xl font-bold text-white">4+</span>
               </div>
               <p className="text-sm lg:text-base text-gray-200">Years Experience</p>
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center mb-2">
                 <Users className="w-6 h-6 text-blue-400 mr-2" />
-                <span className="text-2xl lg:text-3xl font-bold text-white">500+</span>
+                <span className="text-2xl lg:text-3xl font-bold text-white">560+</span>
               </div>
               <p className="text-sm lg:text-base text-gray-200">Happy Clients</p>
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center mb-2">
                 <Star className="w-6 h-6 text-blue-400 mr-2" />
-                <span className="text-2xl lg:text-3xl font-bold text-white">4.8★</span>
+                <span className="text-2xl lg:text-3xl font-bold text-white">5.0★</span>
               </div>
               <p className="text-sm lg:text-base text-gray-200">Google Rating</p>
             </div>

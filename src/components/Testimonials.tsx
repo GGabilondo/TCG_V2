@@ -66,10 +66,10 @@ const Testimonials = () => {
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                 ))}
-                <span className="ml-2 text-lg font-bold text-white">4.8</span>
+                <span className="ml-2 text-lg font-bold text-white">5.0</span>
               </div>
             </div>
-            <span className="text-gray-300">55+ positive reviews</span>
+            <span className="text-gray-300">11+ positive reviews</span>
           </div>
         </div>
 
