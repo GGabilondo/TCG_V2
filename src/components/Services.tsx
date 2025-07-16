@@ -214,9 +214,9 @@ const Services = () => {
                         <div>
                           <h4 className="text-blue-400 font-semibold text-sm mb-3 uppercase tracking-wide flex items-center">
                             <Check className="w-4 h-4 mr-2" />
-                            Protection
+                            PAINT
                           </h4>
-                          <p className="text-gray-300 text-sm leading-relaxed ml-6 -mt-1">Decontamination chemical & clay bar, 1-year ceramic coating</p>
+                          <p className="text-gray-300 text-sm leading-relaxed ml-6 -mt-1">3-month paint protection, exhausts polished</p>
                         </div>
                         
                         <div>
