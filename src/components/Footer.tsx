@@ -121,14 +121,6 @@ const Footer = () => {
               </a>
             </div>
 
-            {/* Logo */}
-            <div className="pt-6">
-              <img 
-                src="/images/The_20Clean_20Guy-removebg-preview.png" 
-                alt="The Clean Guy Logo" 
-                className="h-40 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
-              />
-            </div>
           </div>
 
           {/* Map */}
@@ -228,6 +220,15 @@ const Footer = () => {
             </form>
             )}
           </div>
+        </div>
+
+        {/* Mobile Logo - Shows after form on mobile */}
+        <div className="lg:hidden flex justify-center pt-8">
+          <img 
+            src="/images/The_20Clean_20Guy-removebg-preview.png" 
+            alt="The Clean Guy Logo" 
+            className="h-40 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+          />
         </div>
 
         {/* Footer Bottom */}
