@@ -29,7 +29,7 @@ const Services = () => {
         'Steering wheel cleaned'
       ],
       duration: '2.5 - 4 Hours',
-      description: 'Ideal for well-kept vehicles or as a seasonal refresh.',
+      description: 'Our most basic package: an ideal solution for well-kept vehicles or as a seasonal refresh.',
       popular: false
     },
     {
