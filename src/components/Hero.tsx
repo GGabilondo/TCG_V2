@@ -48,7 +48,7 @@ const Hero = () => {
 
           {/* Subtitle */}
           <p className="text-lg md:text-xl lg:text-2xl text-gray-200 mb-6 max-w-2xl mx-auto leading-relaxed">
-            With over 4 years of experience, countless 5-star reviews and the leading car care service in Glasgow.
+            With over 4 years of experience and countless 5-star reviews we are the leading car care service in Glasgow.
           </p>
 
           {/* CTA Buttons */}
