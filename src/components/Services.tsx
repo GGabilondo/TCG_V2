@@ -144,8 +144,54 @@ const Services = () => {
                   {service.description}
                 </p>
 
+                {/* Features for TCG PROTECT */}
+                {service.name === 'TCG PROTECT' && (
+                  <div className="mb-6">
+                    <div className="space-y-4">
+                      <div>
+                        <h4 className="text-blue-400 font-semibold text-sm mb-2 uppercase tracking-wide">Exterior</h4>
+                        <p className="text-gray-300 text-xs">Wheels & tyres detailed, safe two-bucket wash</p>
+                      </div>
+                      
+                      <div>
+                        <h4 className="text-blue-400 font-semibold text-sm mb-2 uppercase tracking-wide">Paint</h4>
+                        <p className="text-gray-300 text-xs">Decontamination chemical & clay bar, 1-year ceramic coating</p>
+                      </div>
+                      
+                      <div>
+                        <h4 className="text-blue-400 font-semibold text-sm mb-2 uppercase tracking-wide">Interior</h4>
+                        <p className="text-gray-300 text-xs">Steam cleaning for carpets, mats & leather seats</p>
+                      </div>
+                      
+                      <div>
+                        <h4 className="text-blue-400 font-semibold text-sm mb-2 uppercase tracking-wide">Details</h4>
+                        <p className="text-gray-300 text-xs">Air vents, console, dashboard & steering wheel deep cleaned</p>
+                      </div>
+                      
+                      <div className="bg-blue-500/10 border border-blue-400/30 rounded-lg p-3 mt-4">
+                        <p className="text-blue-400 text-sm font-semibold text-center">ADD ONS AVAILABLE</p>
+                      </div>
+                    </div>
+                    
+                    {/* Duration & Price Highlight */}
+                    <div className="bg-blue-500/10 border border-blue-400/30 rounded-lg p-3 mb-4 mt-6">
+                      <div className="flex justify-between items-center">
+                        <div className="text-center flex-1">
+                          <div className="text-blue-400 text-xs font-medium uppercase tracking-wide">Duration</div>
+                          <div className="text-white font-bold">{service.duration}</div>
+                        </div>
+                        <div className="w-px h-8 bg-blue-400/30"></div>
+                        <div className="text-center flex-1">
+                          <div className="text-blue-400 text-xs font-medium uppercase tracking-wide">Price</div>
+                          <div className="text-white font-bold">{service.price}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
                 {/* Features for TCG DEEP CLEAN */}
-                {(service.name === 'TCG REFRESH' || service.name === 'TCG DEEP CLEAN' || service.name === 'TCG PROTECT') ? (
+                {(service.name === 'TCG REFRESH' || service.name === 'TCG DEEP CLEAN') && (
                   <div className="mb-6">
                     {/* Exterior Features */}
                     <div className="mb-4">
@@ -188,7 +234,10 @@ const Services = () => {
                       </div>
                     </div>
                   </div>
-                ) : (
+                )}
+
+                {/* Regular features for other services */}
+                {service.name !== 'TCG REFRESH' && service.name !== 'TCG DEEP CLEAN' && service.name !== 'TCG PROTECT' && (
                   /* Regular features for other services */
                   <ul className="space-y-2 mb-6">
                     {service.features?.map((feature, featureIndex) => (
