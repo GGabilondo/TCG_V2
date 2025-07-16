@@ -4,8 +4,8 @@
 
 /* Laptop-specific scaling */
 @media (min-width: 768px) and (max-width: 1023px) {
-  #home {
-    transform: scale(0.8);
+  body {
+    transform: scale(0.75);
     transform-origin: center;
   }
 }
