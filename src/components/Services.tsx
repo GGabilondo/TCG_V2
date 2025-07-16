@@ -31,7 +31,7 @@ const Services = () => {
       price: 'From £240',
       image: '/images/TCG PROTECT.png',
       duration: '7 - 8 Hours',
-      description: 'Our premium service for discerning vehicle owners who want the ultimate in car care.\n\nAll the services included in the TCG DEEP CLEAN package plus:',
+      description: 'Our premium service for discerning vehicle owners who want the ultimate in car care.\n\nAll services included in TCG DEEP CLEAN package plus:',
       popular: false
     }
   ];
