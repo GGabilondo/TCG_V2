@@ -92,7 +92,7 @@ const Services = () => {
         'Dashboard cleaned & dressed'
       ],
       duration: '7 - 8 Hours',
-      description: 'Exterior: Wheels & tyres detailed, safe two-bucket wash\n\nPaint: Decontamination chemical & clay bar, 1-year ceramic coating\n\nInterior: Steam cleaning for carpets, mats & leather seats\n\nDetails: Air vents, console, dashboard & steering wheel deep cleaned\n\nADD ONS AVAILABLE',
+      description: 'Comprehensive cleaning inside and out with advanced paint protection. Our premium service for discerning vehicle owners who want the ultimate in car care.',
       popular: false
     }
   ];
