@@ -65,7 +65,7 @@ const Services = () => {
     },
     {
       name: 'TCG PROTECT',
-      price: '£240 - £280',
+      price: 'From £240',
       image: '/images/interior_cleaning_audi_lamborghini-1snl2-jc.png',
       exteriorFeatures: [
         'Engine bay cleaned',
@@ -92,7 +92,7 @@ const Services = () => {
         'Dashboard cleaned & dressed'
       ],
       duration: '7 - 8 Hours',
-      description: 'Comprehensive cleaning inside and out with advanced paint protection. Our premium service for discerning vehicle owners who want the ultimate in car care.',
+      description: 'Our premium service for discerning vehicle owners who want the ultimate in car care.',
       popular: false
     }
   ];
