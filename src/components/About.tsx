@@ -34,14 +34,14 @@ const About = () => {
             <div className="inline-flex items-center px-4 py-2 bg-blue-500/20 backdrop-blur-sm rounded-full border border-blue-400/30 text-blue-400 text-sm font-medium mb-4">
               About TCG CarCare
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-6">
               Glasgow's Premier Mobile Car Care
             </h2>
             <div className="space-y-4 text-gray-300 mb-8">
-              <p className="text-lg leading-relaxed">
+              <p className="text-base lg:text-lg leading-relaxed">
                 At TCG Car Care, we provide fully mobile valeting and detailing, complete with our own power and water, so you can enjoy a flawless finish at home, work, or any location you choose.
               </p>
-              <p className="text-lg leading-relaxed">
+              <p className="text-base lg:text-lg leading-relaxed">
                 Our commitment is simple: obsessive attention to detail, exceptional service, and results that make your vehicle look and feel showroom fresh.
               </p>
             </div>

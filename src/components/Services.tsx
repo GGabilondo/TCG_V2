@@ -105,10 +105,10 @@ const Services = () => {
           <div className="inline-flex items-center px-4 py-2 bg-blue-500/20 backdrop-blur-sm rounded-full border border-blue-400/30 text-blue-400 text-sm font-medium mb-4">
             Our Services
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-6">
             Premium Car Care Solutions
           </h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          <p className="text-lg lg:text-xl text-gray-300 max-w-2xl mx-auto">
             Professional mobile car care that comes to you.
           </p>
         </div>

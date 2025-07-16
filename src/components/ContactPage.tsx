@@ -125,11 +125,11 @@ const ContactPage = () => {
             Get in Touch
           </div>
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-6 leading-tight">
             Ready to Book?
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl lg:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto leading-relaxed">
             Contact Glasgow's premier mobile car care service. We come to you with professional equipment and expertise.
           </p>
         </div>
