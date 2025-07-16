@@ -14,20 +14,6 @@ const Services = () => {
       name: 'TCG REFRESH',
       price: 'From £90',
       image: '/images/TCG_refresh.png',
-      exteriorFeatures: [
-        'Wheels, tyres & wheel wells detailed',
-        'Safe two-bucket wash',
-        'Exterior windows cleaned',
-        'Door, boot & bonnet shuts cleaned'
-      ],
-      interiorFeatures: [
-        'Boot, carpets & mats hoovered',
-        'Leather seats wiped/cleaned',
-        'Air vents detailed',
-        'Centre console, door cards, and dashboard wiped & cleaned',
-        'Interior windows & mirrors cleaned',
-        'Steering wheel cleaned'
-      ],
       duration: '2.5 - 4 Hours',
       description: 'Our most basic package: an ideal solution for well-kept vehicles or as a seasonal refresh.',
       popular: false
@@ -36,63 +22,16 @@ const Services = () => {
       name: 'TCG DEEP CLEAN',
       price: 'From £150',
       image: '/images/TCG_DEEP_CLEAN_service.png',
-      exteriorFeatures: [
-        'Engine bay cleaned',
-        'Wheels, tyres & wheel wells detailed',
-        'Safe two-bucket wash',
-        'Exhaust tips polished',
-        '3-month paint protection applied',
-        'Exterior windows cleaned',
-        'Door, boot & bonnet shuts cleaned',
-        'Faded exterior trim dressed and restored'
-      ],
-      interiorFeatures: [
-        'Boot hoovered & steam cleaned',
-        'Carpets & mats hoovered & steam cleaned',
-        'Leather seats steam cleaned & conditioned',
-        'Fabric seats steam cleaned',
-        'Stain removal where required',
-        'Air vents detailed',
-        'Centre console cleaned & detailed',
-        'Door cards & interior doors cleaned',
-        'Interior windows & mirrors cleaned',
-        'Dashboard cleaned',
-        'Steering wheel deep cleaned'
-      ],
       duration: '4 - 7 Hours',
-      description: 'Comprehensive cleaning inside and out. Our most popular service for discerning vehicle owners.',
+      description: 'Our most popular service for discerning vehicle owners. This package will leave your car looking like new or better!\n\nAll the services included in the TCG REFRESH package plus:',
       popular: true
     },
     {
       name: 'TCG PROTECT',
       price: 'From £240',
       image: '/images/TCG PROTECT.png',
-      exteriorFeatures: [
-        'Engine bay cleaned',
-        'Wheels, tyres & wheel wells details',
-        'Safe two-bucket wash',
-        'Paint Decontamination Chemical',
-        'Paint Decontamination Clay Bar',
-        '1 Year Ceramic Coating Applied',
-        'Exhaust tips polished',
-        'Exterior windows cleaned',
-        'Door, boot & bonnet shuts cleaned',
-        'Faded exterior trim dressed and restored'
-      ],
-      interiorFeatures: [
-        'Boot hovered & steam cleaned',
-        'Carpets & mats hoovered & steam cleaned',
-        'Leather seats steam cleaned & conditioned',
-        'Fabric seats steam cleaned',
-        'Stain removal where required',
-        'Air vents detailed',
-        'Centre console cleaned & detailed',
-        'Door cards & interior doors cleaned',
-        'Interior windows & mirrors cleaned',
-        'Dashboard cleaned & dressed'
-      ],
       duration: '7 - 8 Hours',
-      description: 'Our premium service for discerning vehicle owners who want the ultimate in car care.',
+      description: 'Our premium service for discerning vehicle owners who want the ultimate in car care.\n\nAll the services included in the TCG DEEP CLEAN package plus:',
       popular: false
     }
   ];
@@ -153,15 +92,7 @@ const Services = () => {
                           <Check className="w-4 h-4 mr-2" />
                           Exterior
                         </h4>
-                        <p className="text-gray-300 text-sm leading-relaxed ml-6 -mt-1">Engine bay, wheels & tyres detailed, safe two-bucket wash</p>
-                      </div>
-                      
-                      <div>
-                        <h4 className="text-blue-400 font-semibold text-sm mb-3 uppercase tracking-wide flex items-center">
-                          <Check className="w-4 h-4 mr-2" />
-                          Protection
-                        </h4>
-                        <p className="text-gray-300 text-sm leading-relaxed ml-6 -mt-1">3-month paint protection, exhausts polished</p>
+                        <p className="text-gray-300 text-sm leading-relaxed ml-6 -mt-1">Chemical decontamination tar & iron, faded exterior plastics restored</p>
                       </div>
                       
                       <div>
@@ -169,7 +100,15 @@ const Services = () => {
                           <Check className="w-4 h-4 mr-2" />
                           Interior
                         </h4>
-                        <p className="text-gray-300 text-sm leading-relaxed ml-6 -mt-1">Steam cleaning for carpets, mats & leather seats</p>
+                        <p className="text-gray-300 text-sm leading-relaxed ml-6 -mt-1">Leather conditioning & wet vacuuming of fabric</p>
+                      </div>
+                      
+                      <div>
+                        <h4 className="text-blue-400 font-semibold text-sm mb-3 uppercase tracking-wide flex items-center">
+                          <Check className="w-4 h-4 mr-2" />
+                          Protection
+                        </h4>
+                        <p className="text-gray-300 text-sm leading-relaxed ml-6 -mt-1">One year ceramic coating for paint, glass & wheels protection</p>
                       </div>
                       
                       <div>
@@ -177,7 +116,7 @@ const Services = () => {
                           <Check className="w-4 h-4 mr-2" />
                           Details
                         </h4>
-                        <p className="text-gray-300 text-sm leading-relaxed ml-6 -mt-1">Air vents, console, dashboard & steering wheel deep cleaned</p>
+                        <p className="text-gray-300 text-sm leading-relaxed ml-6 -mt-1">Fabric/leather Seats ceramic coated for 1 year</p>
                       </div>
                     </div>
                     
@@ -208,15 +147,7 @@ const Services = () => {
                             <Check className="w-4 h-4 mr-2" />
                             Exterior
                           </h4>
-                          <p className="text-gray-300 text-sm leading-relaxed ml-6 -mt-1">Wheels & tyres detailed, safe two-bucket wash</p>
-                        </div>
-                        
-                        <div>
-                          <h4 className="text-blue-400 font-semibold text-sm mb-3 uppercase tracking-wide flex items-center">
-                            <Check className="w-4 h-4 mr-2" />
-                            PAINT
-                          </h4>
-                          <p className="text-gray-300 text-sm leading-relaxed ml-6 -mt-1">3-month paint protection, exhausts polished</p>
+                          <p className="text-gray-300 text-sm leading-relaxed ml-6 -mt-1">Engine bay & detailed brushing of exterior crevices</p>
                         </div>
                         
                         <div>
@@ -224,7 +155,15 @@ const Services = () => {
                             <Check className="w-4 h-4 mr-2" />
                             Interior
                           </h4>
-                          <p className="text-gray-300 text-sm leading-relaxed ml-6 -mt-1">Steam cleaning for carpets, mats & leather seats</p>
+                          <p className="text-gray-300 text-sm leading-relaxed ml-6 -mt-1">Steam cleaning for carpets, mats & leather/fabric seats</p>
+                        </div>
+                        
+                        <div>
+                          <h4 className="text-blue-400 font-semibold text-sm mb-3 uppercase tracking-wide flex items-center">
+                            <Check className="w-4 h-4 mr-2" />
+                            Paint
+                          </h4>
+                          <p className="text-gray-300 text-sm leading-relaxed ml-6 -mt-1">3-month paint, glass & wheels protection, exhausts polished</p>
                         </div>
                         
                         <div>
@@ -250,17 +189,17 @@ const Services = () => {
                           <div>
                             <h4 className="text-blue-400 font-semibold text-sm mb-3 uppercase tracking-wide flex items-center">
                               <Check className="w-4 h-4 mr-2" />
-                              Windows
+                              Interior
                             </h4>
-                            <p className="text-gray-300 text-sm leading-relaxed ml-6 -mt-1">Exterior windows cleaned</p>
+                            <p className="text-gray-300 text-sm leading-relaxed ml-6 -mt-1">Boot, carpets & mats hoovered, seats wiped/cleaned</p>
                           </div>
                           
                           <div>
                             <h4 className="text-blue-400 font-semibold text-sm mb-3 uppercase tracking-wide flex items-center">
                               <Check className="w-4 h-4 mr-2" />
-                              Interior
+                              Windows
                             </h4>
-                            <p className="text-gray-300 text-sm leading-relaxed ml-6 -mt-1">Boot, carpets & mats hoovered, leather seats wiped/cleaned</p>
+                            <p className="text-gray-300 text-sm leading-relaxed ml-6 -mt-1">Exterior windows & mirrors cleaned</p>
                           </div>
                           
                           <div>
