@@ -35,7 +35,7 @@ const Services = () => {
     {
       name: 'TCG DEEP CLEAN',
       price: 'From £150',
-      image: '/images/optimizada.png',
+      image: '/images/TCG_DEEP_CLEAN_service.png',
       exteriorFeatures: [
         'Engine bay cleaned',
         'Wheels, tyres & wheel wells detailed',
