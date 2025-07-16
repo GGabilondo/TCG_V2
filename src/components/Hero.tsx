@@ -111,9 +111,9 @@ const Hero = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="hidden xl:block xl:absolute xl:bottom-8 xl:left-1/2 xl:transform xl:-translate-x-1/2 xl:animate-bounce">
-        <div className="hidden md:block md:w-6 md:h-10 md:border-2 md:border-blue-400/50 md:rounded-full md:flex md:justify-center">
-          <div className="hidden md:block md:w-1 md:h-3 md:bg-blue-400/80 md:rounded-full md:mt-2"></div>
+      <div className="hidden 2xl:block 2xl:absolute 2xl:bottom-8 2xl:left-1/2 2xl:transform 2xl:-translate-x-1/2 2xl:animate-bounce">
+        <div className="w-6 h-10 border-2 border-blue-400/50 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-blue-400/80 rounded-full mt-2"></div>
         </div>
       </div>
     </section>
