@@ -15,7 +15,7 @@ const Services = () => {
       price: 'From £90',
       image: '/images/TCG_refresh.png',
       duration: '2.5 - 4 Hours',
-      description: 'Our most basic package: an ideal solution for well-kept vehicles or as a seasonal refresh.',
+      description: 'Our most basic package: an ideal solution for well-kept vehicles or as a seasonal refresh.\n\nThe service includes:',
       popular: false
     },
     {
