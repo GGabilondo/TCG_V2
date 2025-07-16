@@ -124,8 +124,8 @@ const Footer = () => {
             {/* Logo */}
             <div className="pt-6">
               <img 
-                src="/images/TCG_Logo.png" 
-                alt="TCG CarCare Logo" 
+                src="/images/The_20Clean_20Guy-removebg-preview.png" 
+                alt="The Clean Guy Logo" 
                 className="h-16 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
               />
             </div>

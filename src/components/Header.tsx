@@ -53,8 +53,8 @@ const Header = () => {
             onClick={() => navigate('/')}
           >
             <img 
-              src="/images/TCG_Logo.png" 
-              alt="TCG CarCare Logo" 
+              src="/images/The_20Clean_20Guy-removebg-preview.png" 
+              alt="The Clean Guy Logo" 
               className="h-16 lg:h-20 w-auto object-contain"
             />
           </div>
