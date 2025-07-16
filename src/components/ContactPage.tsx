@@ -126,10 +126,8 @@ const ContactPage = () => {
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-            Ready to Book Your
-            <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400" style={{textShadow: '0 0 20px rgba(59, 130, 246, 0.8), 0 0 40px rgba(59, 130, 246, 0.6), 0 0 60px rgba(59, 130, 246, 0.4)'}}>
-              Premium Service?
+              Ready to Book?
             </span>
           </h1>
           
