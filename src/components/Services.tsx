@@ -66,7 +66,7 @@ const Services = () => {
     {
       name: 'TCG PROTECT',
       price: 'From £240',
-      image: '/images/interior_cleaning_audi_lamborghini-1snl2-jc.png',
+      image: '/images/TCG PROTECT.png',
       exteriorFeatures: [
         'Engine bay cleaned',
         'Wheels, tyres & wheel wells details',
