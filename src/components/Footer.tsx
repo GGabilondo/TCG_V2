@@ -126,7 +126,7 @@ const Footer = () => {
               <img 
                 src="/images/The_20Clean_20Guy-removebg-preview.png" 
                 alt="The Clean Guy Logo" 
-                className="h-16 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                className="h-24 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
               />
             </div>
           </div>
