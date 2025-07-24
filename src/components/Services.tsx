@@ -11,7 +11,7 @@ const Services = () => {
 
   const services = [
     {
-      name: 'TCG MAINTENANCE Valet',
+      name: 'TCG MAINTENANCE VALET',
       price: '£65 - £90',
       image: '/images/TCG_refresh.png',
       duration: '2 - 3 Hours',
