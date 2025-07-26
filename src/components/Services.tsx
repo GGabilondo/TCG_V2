@@ -138,7 +138,7 @@ const Services = () => {
                 )}
 
                 {/* Features for TCG DEEP CLEAN */}
-                {(service.name === 'TCG MAINTENANCE Valet' || service.name === 'TCG DEEP CLEAN') && (
+                {(service.name === 'TCG MAINTENANCE VALET' || service.name === 'TCG DEEP CLEAN') && (
                   <div className="mb-6">
                     {service.name === 'TCG DEEP CLEAN' ? (
                       <div className="space-y-4">
@@ -176,7 +176,7 @@ const Services = () => {
                       </div>
                     ) : (
                       <>
-                        {/* Features for TCG MAINTENANCE Valet */}
+                        {/* Features for TCG MAINTENANCE VALET */}
                         <div className="space-y-4">
                           <div>
                             <h4 className="text-blue-400 font-semibold text-sm mb-3 uppercase tracking-wide flex items-center">
@@ -230,24 +230,11 @@ const Services = () => {
                   </div>
                 )}
 
-                {/* Regular features for other services */}
-                {service.name !== 'TCG REFRESH' && service.name !== 'TCG DEEP CLEAN' && service.name !== 'TCG PROTECT' && (
-                  /* Regular features for other services */
-                  <ul className="space-y-2 mb-6">
-                    {service.features?.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-
                 <button 
                   onClick={scrollToContact}
                   className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2 group shadow-lg shadow-blue-500/20 hover:shadow-blue-500/30 btn-glow"
                 >
-                  <span>Book {service.name === 'TCG MAINTENANCE Valet' ? 'TCG MAINTENANCE Valet' : service.name === 'TCG DEEP CLEAN' ? 'TCG DEEP CLEAN' : service.name === 'TCG PROTECT' ? 'TCG PROTECT' : service.name}</span>
+                  <span>Book {service.name === 'TCG MAINTENANCE VALET' ? 'TCG MAINTENANCE VALET' : service.name === 'TCG DEEP CLEAN' ? 'TCG DEEP CLEAN' : service.name === 'TCG PROTECT' ? 'TCG PROTECT' : service.name}</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>
