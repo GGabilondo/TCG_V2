@@ -229,7 +229,7 @@ const ContactPage = () => {
                       className="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 hover:border-blue-400/50"
                     >
                       <option value="">Select Service *</option>
-                      <option value="TCG MAINTENANCE Valet">TCG MAINTENANCE Valet (£65 - £90)</option>
+                      <option value="TCG MAINTENANCE VALET">TCG MAINTENANCE VALET (£65 - £90)</option>
                       <option value="TCG DEEP CLEAN">TCG DEEP CLEAN (£150 - £175)</option>
                       <option value="TCG PROTECT">TCG PROTECT (£240 - £280)</option>
                       <option value="Maintenance Service">Maintenance Service</option>

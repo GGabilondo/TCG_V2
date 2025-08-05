@@ -215,7 +215,7 @@ const Footer = () => {
                 className="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
               >
                 <option value="">Select Service</option>
-                <option value="TCG MAINTENANCE Valet">TCG MAINTENANCE Valet</option>
+                <option value="TCG MAINTENANCE VALET">TCG MAINTENANCE VALET</option>
                 <option value="TCG DEEP CLEAN">TCG DEEP CLEAN</option>
                 <option value="TCG PROTECT">TCG PROTECT</option>
                 <option value="Maintenance Service">Maintenance Service</option>
