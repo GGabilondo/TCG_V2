@@ -98,6 +98,13 @@ const Header = () => {
               <MessageCircle size={20} />
               <span className="font-medium">+44 7398 251847</span>
             </a>
+            <a 
+              href="tel:+447398251847"
+              className="flex items-center space-x-2 py-2 text-blue-400 hover:text-blue-300 transition-colors"
+            >
+              <Phone size={20} />
+              <span className="font-medium">Call Us</span>
+            </a>
             
             <button 
               onClick={() => setIsMenuOpen(!isMenuOpen)}
