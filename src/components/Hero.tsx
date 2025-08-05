@@ -55,7 +55,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-3 md:gap-2 lg:gap-4 justify-center items-center mb-3 md:mb-4 lg:mb-8">
             <button 
               onClick={scrollToContact}
-              className="group bg-gradient-to-r from-blue-500 to-blue-600 text-white px-4 md:px-4 lg:px-6 py-2 md:py-2 lg:py-3 rounded-full font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 flex items-center space-x-2 shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 transform hover:scale-105 btn-glow text-sm md:text-xs lg:text-base"
+              className="hidden md:group md:bg-gradient-to-r md:from-blue-500 md:to-blue-600 md:text-white md:px-4 lg:px-6 md:py-2 lg:py-3 md:rounded-full md:font-semibold md:hover:from-blue-600 md:hover:to-blue-700 md:transition-all md:duration-300 md:flex md:items-center md:space-x-2 md:shadow-lg md:shadow-blue-500/30 md:hover:shadow-xl md:hover:shadow-blue-500/40 md:transform md:hover:scale-105 md:btn-glow md:text-xs lg:text-base"
             >
               <span>Book Now</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -69,7 +69,7 @@ const Hero = () => {
           </div>
 
           {/* Mobile Google Rating */}
-          <div className="md:hidden flex flex-col items-center justify-center mb-2 space-y-2">
+          <div className="md:hidden flex flex-col items-center justify-center mb-6 space-y-3">
             <div className="flex items-center space-x-3">
               <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg">
                 <span className="font-bold text-lg bg-gradient-to-r from-blue-500 via-red-500 via-yellow-500 to-green-500 bg-clip-text text-transparent">G</span>
@@ -81,6 +81,17 @@ const Hero = () => {
                 <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
               ))}
             </div>
+          </div>
+
+          {/* Mobile Book Now Button */}
+          <div className="md:hidden flex justify-center mb-8">
+            <button 
+              onClick={scrollToContact}
+              className="group bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 flex items-center space-x-2 shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 transform hover:scale-105 btn-glow text-base"
+            >
+              <span>Book Now</span>
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </button>
           </div>
 
           {/* Stats */}
