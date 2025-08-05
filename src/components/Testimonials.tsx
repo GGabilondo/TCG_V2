@@ -69,7 +69,7 @@ const Testimonials = () => {
               </div>
               <span className="text-2xl font-bold text-white">5.0</span>
             </div>
-            <span className="text-gray-300 font-medium">Based on 11+ reviews</span>
+            <span className="text-gray-300 font-medium">Based on 70+ reviews</span>
           </div>
         </div>
 
