@@ -223,6 +223,17 @@ const Services = () => {
                   </div>
                 )}
 
+                {/* Pet Hair Fee - Common to all services */}
+                <div className="mb-6">
+                  <div className="bg-yellow-500/10 border border-yellow-400/30 rounded-lg p-4">
+                    <h4 className="text-yellow-400 font-semibold text-sm mb-2 uppercase tracking-wide flex items-center">
+                      <Check className="w-4 h-4 mr-2" />
+                      Extra
+                    </h4>
+                    <p className="text-gray-300 text-sm leading-relaxed">Pet hair implies £20 - £40 fee</p>
+                  </div>
+                </div>
+
                 <button 
                   onClick={scrollToContact}
                   className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2 group shadow-lg shadow-blue-500/20 hover:shadow-blue-500/30 btn-glow"
