@@ -231,6 +231,9 @@ const Services = () => {
                       Extra
                     </h4>
                     <p className="text-gray-300 text-sm leading-relaxed">Pet hair implies £20 - £40 fee</p>
+                    {service.name === 'TCG PROTECT' && (
+                      <p className="text-gray-300 text-sm leading-relaxed mt-2">+£80 for 2 year protection coating</p>
+                    )}
                   </div>
                 </div>
 
