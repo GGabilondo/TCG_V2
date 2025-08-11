@@ -12,15 +12,15 @@ const Services = () => {
   const services = [
     {
       name: 'TCG MAINTENANCE VALET',
-      price: '£65 - £90',
+      price: '£100 - £120',
       image: '/images/TCG_refresh.png',
-      duration: '2 - 3 Hours',
+      duration: '3 - 4 Hours',
       description: 'This service is only available if the vehicle has previously been Deep Cleaned or Protected by us.\n\nThe service includes:',
       popular: false
     },
     {
       name: 'TCG DEEP CLEAN',
-      price: 'From £150',
+      price: '£200 - £220',
       image: '/images/TCG_DEEP_CLEAN_service.png',
       duration: '4 - 7 Hours',
       description: 'Our most popular service: this package will leave your car looking like new or better!\n\nAll the services included in the TCG REFRESH package plus:',
@@ -28,9 +28,9 @@ const Services = () => {
     },
     {
       name: 'TCG PROTECT',
-      price: 'From £240',
+      price: '£350 - £400',
       image: '/images/TCG PROTECT.png',
-      duration: '7 - 8 Hours',
+      duration: '7 - 9 Hours',
       description: 'Our premium service for discerning vehicle owners who want the ultimate in car care.\n\nAll services included in TCG DEEP CLEAN package plus:',
       popular: false
     }

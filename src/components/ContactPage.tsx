@@ -229,9 +229,9 @@ const ContactPage = () => {
                       className="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 hover:border-blue-400/50"
                     >
                       <option value="">Select Service *</option>
-                      <option value="TCG MAINTENANCE VALET">TCG MAINTENANCE VALET (£65 - £90)</option>
-                      <option value="TCG DEEP CLEAN">TCG DEEP CLEAN (£150 - £175)</option>
-                      <option value="TCG PROTECT">TCG PROTECT (£240 - £280)</option>
+                      <option value="TCG MAINTENANCE VALET">TCG MAINTENANCE VALET (£100 - £120)</option>
+                      <option value="TCG DEEP CLEAN">TCG DEEP CLEAN (£200 - £220)</option>
+                      <option value="TCG PROTECT">TCG PROTECT (£350 - £400)</option>
                       <option value="Maintenance Service">Maintenance Service</option>
                     </select>
                   </div>
@@ -379,7 +379,7 @@ const ContactPage = () => {
             
             <div className="bg-black rounded-lg p-6 border border-gray-800">
               <h4 className="text-lg font-semibold text-white mb-3">How long does a service take?</h4>
-              <p className="text-gray-300">Basic Clean: 1-2 hours, Full Clean: 2-3 hours, Deep Clean: 4-6 hours depending on vehicle condition.</p>
+              <p className="text-gray-300">Maintenance: 3-4 hours, Deep Clean: 4-7 hours, Protect: 7-9 hours depending on vehicle condition.</p>
             </div>
             
             <div className="bg-black rounded-lg p-6 border border-gray-800">
