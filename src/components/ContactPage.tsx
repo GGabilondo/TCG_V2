@@ -176,7 +176,6 @@ const ContactPage = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">Booking Received!</h3>
                   <p className="text-gray-300 mb-4">Thank you for choosing TCG CarCare. We'll contact you within 2 hours to confirm your appointment.</p>
-                  <p className="text-sm text-gray-400">Emails sent to both info@tcgcarcare.co.uk and hola@remedio.studio</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
