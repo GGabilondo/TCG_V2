@@ -23,7 +23,7 @@ const Services = () => {
       price: '£200 - £220',
       image: '/images/TCG_DEEP_CLEAN_service.png',
       duration: '4 - 7 Hours',
-      description: 'Our most popular service: this package will leave your car looking like new or better!\n\nAll the services included in the TCG REFRESH package plus:',
+      description: 'Our most popular service: this package will leave your car looking like new or better!\n\nAll the services included in the TCG MAINTENANCE VALET package plus:',
       popular: true
     },
     {
