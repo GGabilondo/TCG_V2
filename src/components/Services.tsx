@@ -100,7 +100,7 @@ const Services = () => {
                           <Check className="w-4 h-4 mr-2" />
                           Interior
                         </h4>
-                        <p className="text-gray-300 text-sm leading-relaxed ml-6 -mt-1">Deep interior detailing and protection</p>
+                        <p className="text-gray-300 text-sm leading-relaxed ml-6 -mt-1">Deep interior detailing and protection, leather seats cleaned & conditioned</p>
                       </div>
                       
                       <div>
