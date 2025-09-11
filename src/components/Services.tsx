@@ -228,7 +228,7 @@ const Services = () => {
                   <div className="bg-yellow-500/10 border border-yellow-400/30 rounded-lg p-4">
                     <h4 className="text-yellow-400 font-semibold text-sm mb-2 uppercase tracking-wide flex items-center">
                       <Check className="w-4 h-4 mr-2" />
-                      Extra
+                      Add-ons
                     </h4>
                     <p className="text-gray-300 text-sm leading-relaxed">Pet hair implies £20 - £40 fee</p>
                     {service.name === 'TCG PROTECT' && (
