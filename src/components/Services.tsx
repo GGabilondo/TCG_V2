@@ -100,7 +100,7 @@ const Services = () => {
                           <Check className="w-4 h-4 mr-2" />
                           Interior
                         </h4>
-                        <p className="text-gray-300 text-sm leading-relaxed ml-6 -mt-1">Leather conditioning & wet vacuuming of fabric</p>
+                        <p className="text-gray-300 text-sm leading-relaxed ml-6 -mt-1">Deep interior detailing and protection</p>
                       </div>
                       
                       <div>
@@ -140,7 +140,7 @@ const Services = () => {
                             <Check className="w-4 h-4 mr-2" />
                             Exterior
                           </h4>
-                          <p className="text-gray-300 text-sm leading-relaxed ml-6 -mt-1">Engine bay & detailed brushing of exterior crevices</p>
+                          <p className="text-gray-300 text-sm leading-relaxed ml-6 -mt-1">Detailed brushing of exterior crevices</p>
                         </div>
                         
                         <div>
