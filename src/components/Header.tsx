@@ -93,10 +93,10 @@ const Header = () => {
               href="https://wa.me/447398251847" 
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:flex items-center space-x-2 text-green-400 hover:text-green-300 transition-all duration-300 px-3 py-2 rounded-lg border border-green-400/30 hover:border-green-400/50 hover:bg-green-400/10 backdrop-blur-sm"
+              className="hidden sm:flex items-center space-x-2 bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-full hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg shadow-green-500/30 transform hover:scale-105 btn-glow hover:shadow-xl hover:shadow-green-500/50 font-semibold"
             >
               <MessageCircle size={20} />
-              <span className="font-medium">+44 7398 251847</span>
+              <span>Book now through WhatsApp</span>
             </a>
             
             <button 
