@@ -96,7 +96,7 @@ const Header = () => {
               className="hidden sm:flex items-center space-x-2 bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-full hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg shadow-green-500/30 transform hover:scale-105 btn-glow hover:shadow-xl hover:shadow-green-500/50 font-semibold"
             >
               <MessageCircle size={20} />
-              <span>Book now through WhatsApp</span>
+              <span>Book now</span>
             </a>
             
             <button 
