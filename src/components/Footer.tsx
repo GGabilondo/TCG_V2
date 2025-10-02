@@ -6,6 +6,9 @@ import { sendFooterForm, FooterFormData } from '../utils/emailService';
 declare global {
   interface Window {
     fbq: (action: string, event: string, params?: any) => void;
+    ttq: {
+      track: (event: string, params?: any) => void;
+    };
   }
 }
 
@@ -46,6 +49,16 @@ const Footer = () => {
             content_name: 'Footer Quick Booking Form',
             content_category: 'Contact Form',
             value: 150, // Average service value
+            currency: 'GBP'
+          });
+        }
+        
+        // Track TikTok Pixel event for footer form submission
+        if (typeof window !== 'undefined' && window.ttq) {
+          window.ttq.track('CompletePayment', {
+            content_type: 'form_submission',
+            content_name: 'Footer Quick Booking Form',
+            value: 150,
             currency: 'GBP'
           });
         }

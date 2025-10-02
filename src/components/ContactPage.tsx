@@ -6,6 +6,9 @@ import { sendContactForm, ContactFormData } from '../utils/emailService';
 declare global {
   interface Window {
     fbq: (action: string, event: string, params?: any) => void;
+    ttq: {
+      track: (event: string, params?: any) => void;
+    };
   }
 }
 
@@ -42,6 +45,16 @@ const ContactPage = () => {
             content_name: 'Contact Page Detailed Booking Form',
             content_category: 'Contact Form',
             value: 200, // Average service value for detailed bookings
+            currency: 'GBP'
+          });
+        }
+        
+        // Track TikTok Pixel event for contact page form submission
+        if (typeof window !== 'undefined' && window.ttq) {
+          window.ttq.track('CompletePayment', {
+            content_type: 'form_submission',
+            content_name: 'Contact Page Detailed Booking Form',
+            value: 200,
             currency: 'GBP'
           });
         }
