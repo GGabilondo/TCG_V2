@@ -2,16 +2,6 @@ import React, { useState } from 'react';
 import { Phone, MessageCircle, Mail, MapPin, Clock, CheckCircle, ArrowRight, Star } from 'lucide-react';
 import { sendContactForm, ContactFormData } from '../utils/emailService';
 
-// Declare fbq function for TypeScript
-declare global {
-  interface Window {
-    fbq: (action: string, event: string, params?: any) => void;
-    ttq: {
-      track: (event: string, params?: any) => void;
-    };
-  }
-}
-
 const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -38,26 +28,6 @@ const ContactPage = () => {
       
       if (success) {
         setIsSubmitted(true);
-        
-        // Track Meta Pixel event for contact page form submission
-        if (typeof window !== 'undefined' && window.fbq) {
-          window.fbq('track', 'Lead', {
-            content_name: 'Contact Page Detailed Booking Form',
-            content_category: 'Contact Form',
-            value: 200, // Average service value for detailed bookings
-            currency: 'GBP'
-          });
-        }
-        
-        // Track TikTok Pixel event for contact page form submission
-        if (typeof window !== 'undefined' && window.ttq) {
-          window.ttq.track('CompletePayment', {
-            content_type: 'form_submission',
-            content_name: 'Contact Page Detailed Booking Form',
-            value: 200,
-            currency: 'GBP'
-          });
-        }
         
         setFormData({
           name: '',
