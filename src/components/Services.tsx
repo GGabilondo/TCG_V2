@@ -19,19 +19,19 @@ const Services = () => {
       popular: false
     },
     {
-      name: 'TCG DEEP CLEAN',
+      name: 'TCG RESET',
       price: '£200 - £220',
       image: '/images/TCG_DEEP_CLEAN_service.png',
       duration: '4 - 7 Hours',
-      description: 'Our most popular service: this package will leave your car looking like new or better!\n\nAll the services included in the TCG MAINTENANCE VALET package plus:',
+      description: 'Our most popular service: this package will leave your car looking like new or better!\n\nAll the services included in the TCG REFRESH package plus:',
       popular: true
     },
     {
       name: 'TCG PROTECT',
-      price: '£350 - £400',
+      price: '£300 - £350',
       image: '/images/TCG PROTECT.png',
       duration: '7 - 9 Hours',
-      description: 'Our premium service for discerning vehicle owners who want the ultimate in car care.\n\nAll services included in TCG DEEP CLEAN package plus:',
+      description: 'Our premium service for discerning vehicle owners who want the ultimate in car care.\n\nAll services included in TCG RESET package plus:',
       popular: false
     }
   ];
@@ -130,10 +130,10 @@ const Services = () => {
                   </div>
                 )}
 
-                {/* Features for TCG DEEP CLEAN */}
-                {(service.name === 'TCG REFRESH' || service.name === 'TCG DEEP CLEAN') && (
+                {/* Features for TCG RESET */}
+                {(service.name === 'TCG REFRESH' || service.name === 'TCG RESET') && (
                   <div className="mb-6">
-                    {service.name === 'TCG DEEP CLEAN' ? (
+                    {service.name === 'TCG RESET' ? (
                       <div className="space-y-4">
                         <div>
                           <h4 className="text-blue-400 font-semibold text-sm mb-3 uppercase tracking-wide flex items-center">
