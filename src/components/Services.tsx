@@ -11,11 +11,11 @@ const Services = () => {
 
   const services = [
     {
-      name: 'TCG MAINTENANCE VALET',
+      name: 'TCG REFRESH',
       price: '£100 - £120',
       image: '/images/TCG_refresh.png',
       duration: '3 - 4 Hours',
-      description: 'This service is only available if the vehicle has previously been Deep Cleaned or Protected by us.\n\nThe service includes:',
+      description: 'A thorough deep clean restoring your vehicle\'s freshness and shine, perfect for lightly used, well-kept cars.\n\nThe service includes:',
       popular: false
     },
     {
@@ -131,7 +131,7 @@ const Services = () => {
                 )}
 
                 {/* Features for TCG DEEP CLEAN */}
-                {(service.name === 'TCG MAINTENANCE VALET' || service.name === 'TCG DEEP CLEAN') && (
+                {(service.name === 'TCG REFRESH' || service.name === 'TCG DEEP CLEAN') && (
                   <div className="mb-6">
                     {service.name === 'TCG DEEP CLEAN' ? (
                       <div className="space-y-4">
@@ -169,7 +169,7 @@ const Services = () => {
                       </div>
                     ) : (
                       <>
-                        {/* Features for TCG MAINTENANCE VALET */}
+                        {/* Features for TCG REFRESH */}
                         <div className="space-y-4">
                           <div>
                             <h4 className="text-blue-400 font-semibold text-sm mb-3 uppercase tracking-wide flex items-center">
@@ -227,7 +227,7 @@ const Services = () => {
                   onClick={scrollToContact}
                   className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2 group shadow-lg shadow-blue-500/20 hover:shadow-blue-500/30 btn-glow"
                 >
-                  <span>Book {service.name === 'TCG MAINTENANCE VALET' ? 'TCG MAINTENANCE VALET' : service.name === 'TCG DEEP CLEAN' ? 'TCG DEEP CLEAN' : service.name === 'TCG PROTECT' ? 'TCG PROTECT' : service.name}</span>
+                  <span>Book {service.name}</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>
