@@ -12,7 +12,7 @@ const Services = () => {
   const services = [
     {
       name: 'TCG REFRESH',
-      price: '£100 - £120',
+      price: 'FROM £60',
       image: '/images/TCG_refresh.png',
       duration: '3 - 4 Hours',
       description: 'A thorough deep clean restoring your vehicle\'s freshness and shine, perfect for lightly used, well-kept cars.\n\nThe service includes:',
@@ -20,7 +20,7 @@ const Services = () => {
     },
     {
       name: 'TCG RESET',
-      price: '£200 - £220',
+      price: 'FROM £130',
       image: '/images/TCG_DEEP_CLEAN_service.png',
       duration: '4 - 7 Hours',
       description: 'Our most popular service: this package will leave your car looking like new or better!\n\nAll the services included in the TCG REFRESH package plus:',
@@ -28,7 +28,7 @@ const Services = () => {
     },
     {
       name: 'TCG PROTECT',
-      price: '£300 - £350',
+      price: 'FROM £200',
       image: '/images/TCG PROTECT.png',
       duration: '7 - 9 Hours',
       description: 'Our premium service for discerning vehicle owners who want the ultimate in car care.\n\nAll services included in TCG RESET package plus:',
